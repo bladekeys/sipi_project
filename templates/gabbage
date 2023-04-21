@@ -1,0 +1,265 @@
+<div class="column is-5 is-offset-5" style="background:black;">
+    <h3 class="title">Login</h3>
+    <div class="box">
+        <form method="POST" action="/login">
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="email" name="email" placeholder="Your Email" autofocus="">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="password" name="password" placeholder="Your Password">
+                </div>
+            </div>
+            <div class="field">
+                <label class="checkbox">
+                    <input type="checkbox" name="remember">
+                    Remember me
+                </label>
+            </div>
+            <button class="button is-block is-info is-large is-fullwidth">Login</button>
+        </form>
+    </div>
+</div>
+
+
+<div class="center">
+          <label>
+      <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+          </label>
+       </div >
+
+<!doctype html>
+<html lang="ru">
+
+{% extends 'base.html' %}
+
+{% block title %}
+Верхоянский АГЭК
+{% endblock %}
+
+
+{% block body %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/ajax_date.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+
+    <!--    <script>-->
+    <!--        function get_from_daterange1() {-->
+    <!--            $.getJSON({-->
+    <!--                type: "POST",-->
+    <!--                url: "/process_dateh",-->
+    <!--                data: $('form').serialize(),-->
+    <!--                type: 'POST',-->
+    <!--                success: function (result) {-->
+    <!--                    Plotly.newPlot('chart', result, {staticPlot: true});;-->
+    <!--                },-->
+    <!--                error: function(error) {-->
+    <!--                    console.log(error);-->
+    <!--                }-->
+    <!--            });-->
+    <!--        }-->
+    <!--    </script>-->
+
+    <style>
+    @font-face {
+	font-family: Avenir;
+	src: url( "{{ url_for('static', filename='AvenirNextCyr-Regular.ttf') }}" );
+    }
+
+    .font-base{
+    font-family: Avenir !important;
+    }
+    </style>
+
+</head>
+
+
+<form autocomplete="off" class="lower font-base" method="post">
+    <div class="input-group block3">
+        <input type="text" name="date" id="date" class="form-control" placeholder="">
+        <div class="input-group-prepend">
+            <a id=test>
+                <button target="_blank" class="btn btn-success" disabled>Скачать данные</button>
+            </a>
+        </div>
+    </div>
+</form>
+
+<!--<input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />-->
+
+<script>
+$(document).ready(function(){
+    $('input[name="date"]').daterangepicker({
+        opens: 'center',
+        autoApply: false,
+        showDropdowns: true,
+        minDate: new Date("2022"),
+        maxDate: new Date(),
+        minYear: new Date("2022"),
+        maxYear: new Date().getFullYear(),
+        maxSpan :  {
+            "month": 1
+        },
+        locale: {
+        format: "DD/MM/YYYY",
+        "applyLabel": "Отобразить",
+        "cancelLabel": "Сброс",
+        "fromLabel": "От",
+        "toLabel": "До",
+        "customRangeLabel": "Произвольный",
+        "daysOfWeek": [
+            "Вс",
+            "Пн",
+            "Вт",
+            "Ср",
+            "Чт",
+            "Пт",
+            "Сб"
+        ],
+        "monthNames": [
+            "Январь",
+            "Февраль",
+            "Март",
+            "Апрель",
+            "Май",
+            "Июнь",
+            "Июль",
+            "Август",
+            "Сентябрь",
+            "Октябрь",
+            "Ноябрь",
+            "Декабрь"
+        ],
+        firstDay: 1
+        }
+    });
+
+    function plot(From, to) {
+      if(From != '' && to != '')
+        {
+            $.getJSON({
+                type: "POST",
+                url: "/process_dateh",
+                data:{From:From, to:to},
+                type: 'POST',
+                beforeSend: function () {
+                    Loader.open()
+                  },
+                complete: function () {
+                    Loader.close()
+                  },
+                success: function (result) {
+                    Plotly.newPlot('chart', result, {staticPlot: true});
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+        else
+        {
+            alert("Не выбраны даты!");
+        }
+    }
+
+    $('input[name="date"]').on('apply.daterangepicker', function(ev, picker) {
+      var From = picker.startDate.format('YYYY-MM-DD');
+      var to = picker.endDate.format('YYYY-MM-DD');
+      plot(From, to);
+    });
+
+    $('input[name="date"]').on('cancel.daterangepicker', function(ev, picker) {
+        $(this).val(new Date().toLocaleDateString("en-GB") + ' - ' + new Date().toLocaleDateString("en-GB"));
+        $.ajax({
+            url: '{{url_for('static', filename='default_pages/index_default.json')}}',
+            type: 'GET',
+            dataType: 'json',
+            data: { },
+            beforeSend: function () {
+                    Loader.open()
+                  },
+            complete: function () {
+                    Loader.close()
+                  },
+            success: function(response) {
+                // Hide the loader
+                //loader.style.display = "none";
+
+                // Display the chart div and plot the chart
+                // chartDiv.style.display = "block";
+                var graphJSON = response;
+                graphJSON.config = {responsive: true, displaylogo: false};
+                Plotly.newPlot('chart', graphJSON, {});
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+});
+
+</script>
+
+
+<div class="row block2">
+    <div class="col">
+        <div id="chart" class="chart">
+            <div id="loader">
+                <img src="{{ url_for('static', filename='progress_bar.gif') }}" alt="Загрузка данных...">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.onload = function() {
+        var loader = document.getElementById("loader");
+        var chartDiv = document.getElementById("chart");
+
+        // Display the loader
+        loader.style.display = "block";
+
+        // Make the POST request
+        $.ajax({
+            url: '{{url_for('static', filename='default_pages/index_default.json')}}',
+            type: 'GET',
+            dataType: 'json',
+            data: { },
+            success: function(response) {
+                // Hide the loader
+                loader.style.display = "none";
+
+                // Display the chart div and plot the chart
+                chartDiv.style.display = "block";
+                var graphJSON = response;
+                graphJSON.config = {responsive: true, displaylogo: false};
+                Plotly.newPlot('chart', graphJSON, {});
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    };
+</script>
+
+
+{% endblock %}

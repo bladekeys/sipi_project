@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница сайта по математике для средней школы
+{% endblock %}
+
+
+{% block body %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/ajax_date.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
+
+    <style>
+    @font-face {
+	font-family: Avenir;
+	src: url( "{{ url_for('static', filename='AvenirNextCyr-Regular.ttf') }}" );
+    }
+
+    .font-base{
+    font-family: Avenir !important;
+    }
+
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+<div style="text-align: center; margin-top: 100px;">
+    <img class="text-align: center;" src="{{ url_for('static', filename='monkey.gif') }}" alt="404">
+    <h1 style="color: black;">Однажды здесь появится информация...</h1>
+</div>
+<div class="container">
+    <div class="books_profile">
+        <a class="books_text" href="/"><h2>Статьи</h2></a>
+        <hr>
+        <div>
+            <a class="books_text" href="/5klass"><h3>5 класс</h3></a>
+        </div>
+        <div>
+            <a class="books_text" href="/6klass"><h3>6 класс</h3></a>
+        </div>
+        <div>
+            <a class="books_text" href="/7klass"><h3>7 класс</h3></a>
+        </div>
+        <div>
+            <a class="books_text" href="/8klass"><h3>8 класс</h3></a>
+        </div>
+        <div>
+            <a class="books_text" href="/9klass"><h3>9 класс</h3></a>
+        </div>
+    </div>
+
+    <div class="books_profile">
+        <a class="books_text" href="/books"><h2>Книги</h2></a>
+        <hr>
+        <div>
+            <a class="books_text" href="/books/5klass"><h3>5 класс</h3></a>
+        </div>
+        <div>
+            <a class="books_text" href="/books/6klass"><h3>6 класс</h3></a>
+        </div>
+        <div>
+            <a class="books_text" href="/books/7klass"><h3>7 класс</h3></a>
+        </div>
+        <div>
+            <a class="books_text" href="/books/8klass"><h3>8 класс</h3></a>
+        </div>
+        <div>
+            <a class="books_text" href="/books/9klass"><h3>9 класс</h3></a>
+        </div>
+    </div>
+
+
+    <div class="books_profile">
+        <a class="books_text" href="/tests"><h2>Тесты</h2></a>
+        <hr>
+        <div>
+            <a class="books_text" href="/tests/5klass"><h3>5 класс</h3></a>
+        </div>
+        <div>
+            <a class="books_text" href="/tests/6klass"><h3>6 класс</h3></a>
+        </div>
+        <div>
+            <a class="books_text" href="/tests/7klass"><h3>7 класс</h3></a>
+        </div>
+        <div>
+            <a class="books_text" href="/tests/8klass"><h3>8 класс</h3></a>
+        </div>
+        <div>
+            <a class="books_text" href="/tests/9klass"><h3>9 класс</h3></a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+
+{% endblock %}

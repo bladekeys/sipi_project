@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+
+{% extends 'base.html' %}
+
+{% block title %}
+Профиль
+{% endblock %}
+
+
+{% block body %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/ajax_date.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
+
+    <style>
+    @font-face {
+	font-family: Avenir;
+	src: url( "{{ url_for('static', filename='AvenirNextCyr-Regular.ttf') }}" );
+    }
+
+    .font-base{
+    font-family: Avenir !important;
+    }
+    </style>
+</head>
+
+<body>
+<div style="text-align: center; margin-top: 100px;">
+    <h1 style="color: black;">Профиль</h1>
+    <div class="container">
+        <div class="photo_profile_div">
+            <img class="photo_profile" src="{{ url_for('static', filename='profile.png') }}">
+            <h4>{{current_user.name | safe}}</h4>
+            <br>
+            <h5>Почта: {{current_user.email}}</h5>
+            {% if current_user.verified %}
+            <h5>Почта подтверждена</h5>
+            {% else %}
+            <h5>Почта не подтверждена</h5>
+            {% endif %}
+            <a href="/forget_password"><h5>Поменять пароль</h5></a>
+        </div>
+        <div class="progress_profile">
+            <a href="/tests"><h2>Тесты</h2></a>
+            <p>Общий прогресс по тестам за 5 класс</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                     aria-valuemax="100"></div>
+            </div>
+            <br>
+            <p>Общий прогресс по тестам за 6 класс</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                     aria-valuemax="100"></div>
+            </div>
+            <br>
+            <p>Общий прогресс по тестам за 7 класс</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                     aria-valuemax="100"></div>
+            </div>
+            <br>
+            <p>Общий прогресс по тестам за 8 класс</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                     aria-valuemax="100"></div>
+            </div>
+            <br>
+            <p>Общий прогресс по тестам за 9 класс</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                     aria-valuemax="100"></div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+
+</body>
+
+
+{% endblock %}

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ru">
+
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница сайта по математике для средней школы
+{% endblock %}
+
+
+{% block body %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/ajax_date.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
+
+    <style>
+    @font-face {
+	font-family: Avenir;
+	src: url( "{{ url_for('static', filename='AvenirNextCyr-Regular.ttf') }}" );
+    }
+
+    .font-base{
+    font-family: Avenir !important;
+    }
+
+
+
+
+
+
+
+    </style>
+
+</head>
+
+<style>
+.filterDiv {
+  float: left;
+  background: rgba(0,0,0,0.5);
+  color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+</style>
+<body>
+
+<div style="margin-top: 65px" class="container_books" id="myBtnContainer">
+    <button class="btn btn-secondary active" onclick="filterSelection('all')"> Показать все</button>
+    <button class="btn btn-secondary" onclick="filterSelection('5klass')"> 5 класс</button>
+    <button class="btn btn-secondary" onclick="filterSelection('6klass')"> 6 класс</button>
+    <button class="btn btn-secondary" onclick="filterSelection('7klass')"> 7 класс</button>
+    <button class="btn btn-secondary" onclick="filterSelection('8klass')"> 8 класс</button>
+    <button class="btn btn-secondary" onclick="filterSelection('9klass')"> 9 класс</button>
+</div>
+
+<div class="container">
+    <div class="filterDiv 5klass books_box_form">
+        <a href="https://disk.yandex.ru/i/f6i6HKHyvjwTlA">
+            <div class="books_img">
+                <img class="books_img" src="{{url_for('static',filename='books_photo/vilenkin.jpg')}}">
+            </div>
+            <div class="books_desc">
+                <div class="books_title">
+                    Виленкин 1 часть
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="filterDiv 5klass books_box_form">
+        <a href="https://disk.yandex.ru/i/Zo_BLVlzfg6Uqg">
+            <div class="books_img">
+                <img class="books_img" src="{{url_for('static',filename='books_photo/vilenkin.jpg')}}">
+            </div>
+            <div class="books_desc">
+                <div class="books_title">
+                    Виленкин 2 часть
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="filterDiv 6klass books_box_form">...</div>
+    <div class="filterDiv 6klass books_box_form">.</div>
+    <div class="filterDiv 6klass books_box_form">.</div>
+    <div class="filterDiv 6klass books_box_form">.</div>
+    <div class="filterDiv 7klass books_box_form">.</div>
+    <div class="filterDiv 7klass books_box_form">.</div>
+    <div class="filterDiv 7klass books_box_form">.</div>
+    <div class="filterDiv 8klass books_box_form">.</div>
+    <div class="filterDiv 8klass books_box_form">.</div>
+    <div class="filterDiv 9klass books_box_form">.</div>
+    <div class="filterDiv 9klass books_box_form">.</div>
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+
+</script>
+
+</body>
+
+
+<!--<body>-->
+<!--<div style="text-align: center; margin-top: 100px;">-->
+<!--    <img class="text-align: center;" src="{{ url_for('static', filename='monkey.gif') }}" alt="404">-->
+<!--    <h1 style="color: black;">Однажды здесь появится информация...</h1>-->
+<!--</div>-->
+<!--<div class="container">-->
+<!--    <div class="books_profile">-->
+<!--        <a class="books_text" href="/tests"><h2>Тесты</h2></a>-->
+<!--        <hr>-->
+<!--        <div>-->
+<!--            <a class="books_text" href="/tests/5klass"><h3>5 класс</h3></a>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <a class="books_text" href="/tests/6klass"><h3>6 класс</h3></a>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <a class="books_text" href="/tests/7klass"><h3>7 класс</h3></a>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <a class="books_text" href="/tests/8klass"><h3>8 класс</h3></a>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <a class="books_text" href="/tests/9klass"><h3>9 класс</h3></a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--</body>-->
+
+
+{% endblock %}
