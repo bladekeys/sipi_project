@@ -86,13 +86,11 @@ font-family: Avenir !important;
     max-width: 30%;
     min-height: 200px;
     margin: 0 auto;
-    border: 1px solid;
 }
 
 
 .books_img {
     background-color: transparent;
-    border: 5px solid #fff;
     box-shadow: 0 0 0 1px #d5e0e7;
     overflow: hidden;
     position: relative;
@@ -112,10 +110,44 @@ font-family: Avenir !important;
     max-height: 90px;
     overflow: hidden;
     font-size: 15px;
-    color: white;
+    color: black;
 }
 
+.comment_block {
+    min-width: 400px;
+    min-height: 200px;
+    max-width: 400px;
+    max-height: 500px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
 
+.form_block{
+    margin-bottom: 15px;
+    min-width: 300px;
+}
+
+.comment_text{
+    margin-bottom: 15px;
+}
+
+.flash {
+font-family: Avenir;
+padding: 10px;
+text-align: center;
+border-radius: 3px;
+}
+
+.flash.error {
+font-family: Avenir;
+         border: 1px solid #FF4343;
+         background: #FF9C9C;
+         border-radius: 3px;
+}
 
 
 .lower{

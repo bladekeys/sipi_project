@@ -63,16 +63,16 @@
 <body>
 
 <div style="margin-top: 65px" class="container_books" id="myBtnContainer">
-    <button class="btn btn-secondary active" onclick="filterSelection('all')"> Показать все</button>
-    <button class="btn btn-secondary" onclick="filterSelection('5klass')"> 5 класс</button>
-    <button class="btn btn-secondary" onclick="filterSelection('6klass')"> 6 класс</button>
-    <button class="btn btn-secondary" onclick="filterSelection('7klass')"> 7 класс</button>
-    <button class="btn btn-secondary" onclick="filterSelection('8klass')"> 8 класс</button>
-    <button class="btn btn-secondary" onclick="filterSelection('9klass')"> 9 класс</button>
+    <a href="/books/all"><button class="btn btn-secondary" onclick="filterSelection('all')">Показать все</button></a>
+    <a href="/books/5klass"><button class="btn btn-secondary" onclick="filterSelection('5klass')"> 5 класс</button></a>
+    <a href="/books/6klass"><button class="btn btn-secondary" onclick="filterSelection('6klass')"> 6 класс</button></a>
+    <a href="/books/7klass"><button class="btn btn-secondary" onclick="filterSelection('7klass')"> 7 класс</button></a>
+    <a href="/books/8klass"><button class="btn btn-secondary" onclick="filterSelection('8klass')"> 8 класс</button></a>
+    <a href="/books/9klass"><button class="btn btn-secondary" onclick="filterSelection('9klass')"> 9 класс</button></a>
 </div>
 
 <div class="container">
-    <div class="filterDiv 5klass books_box_form">
+    <div class="filterDiv 5klass books_box_form border border-1 shadow p-3 bg-body rounded">
         <a href="https://disk.yandex.ru/i/f6i6HKHyvjwTlA">
             <div class="books_img">
                 <img class="books_img" src="{{url_for('static',filename='books_photo/vilenkin.jpg')}}">
@@ -84,7 +84,7 @@
             </div>
         </a>
     </div>
-    <div class="filterDiv 5klass books_box_form">
+    <div class="filterDiv 5klass books_box_form border border-1 shadow p-3 bg-body rounded">
         <a href="https://disk.yandex.ru/i/Zo_BLVlzfg6Uqg">
             <div class="books_img">
                 <img class="books_img" src="{{url_for('static',filename='books_photo/vilenkin.jpg')}}">
@@ -96,21 +96,44 @@
             </div>
         </a>
     </div>
-    <div class="filterDiv 6klass books_box_form">...</div>
-    <div class="filterDiv 6klass books_box_form">.</div>
-    <div class="filterDiv 6klass books_box_form">.</div>
-    <div class="filterDiv 6klass books_box_form">.</div>
-    <div class="filterDiv 7klass books_box_form">.</div>
-    <div class="filterDiv 7klass books_box_form">.</div>
-    <div class="filterDiv 7klass books_box_form">.</div>
-    <div class="filterDiv 8klass books_box_form">.</div>
-    <div class="filterDiv 8klass books_box_form">.</div>
-    <div class="filterDiv 9klass books_box_form">.</div>
-    <div class="filterDiv 9klass books_box_form">.</div>
+    <div class="filterDiv 6klass books_box_form border border-1 shadow p-3 bg-body rounded">...</div>
+    <div class="filterDiv 6klass books_box_form border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 6klass books_box_form border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 6klass books_box_form border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 7klass books_box_form border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 7klass books_box_form border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 7klass books_box_form border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 8klass books_box_form border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 8klass books_box_form border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 9klass books_box_form border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 9klass books_box_form border border-1 shadow p-3 bg-body rounded">.</div>
+</div>
+
+<div class="comment_block">
+    <form class="form_block border border-2 rounded-3 shadow p-3 mb-5 bg-body rounded" method="POST">
+        {% if current_user.is_authenticated %}
+        <p>{{current_user.name}}, Вы можете написать нам</p>
+        {% else %}
+        <div class="col comment_text">
+            <label for="inputEmail3" class="form-label">Введите email</label>
+            <input name="email" placeholder="Email" type="email" class="form-control" id="inputEmail3">
+        </div>
+        {% endif %}
+        <p class="form-label">Мы ответим на почту</p>
+        <div class="form-floating comment_text">
+                <textarea name="text" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                          style="min-height: 100px"></textarea>
+            <label for="floatingTextarea2">Ваш вопрос или комментарий</label>
+        </div>
+        {% for cat, msg in get_flashed_messages(True) %}
+        <div class="flash {{cat}} comment_text">{{msg}}</div>
+        {% endfor %}
+        <p><input type="submit" class="btn btn-primary form-control" value="Отправить"/></p>
+    </form>
 </div>
 
 <script>
-filterSelection("all")
+filterSelection("{{id}}")
 function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("filterDiv");

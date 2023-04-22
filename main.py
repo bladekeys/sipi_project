@@ -12,12 +12,12 @@ import json
 from sqlalchemy import create_engine
 from flask_bootstrap import Bootstrap
 from flask_login import login_required, current_user, login_user, logout_user
-from models import Users, login, session
+from models import Users, Coments, login, session
 from mail import Mail, tokens
 from itsdangerous import URLSafeSerializer, SignatureExpired
 
 # load_dotenv(os.path.dirname(__file__)+".env")
-app = Flask(__name__)
+app = Flask(__name__, subdomain_matching=True)
 Bootstrap(app)
 mail = Mail()
 server = '194.58.123.127'
@@ -46,6 +46,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc:///?odbc_connect=%s" % par
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 app.config['SESSION_PERMANENT'] = True
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=14)
+#app.config['SERVER_NAME'] = 'domain.dom:5000'
 # app.config['SESSION_COOKIE_SECURE'] = True
 # app.config['SESSION_COOKIE_HTTPONLY'] = True
 # app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
@@ -66,9 +67,37 @@ def make_session_permanent():
     app.permanent_session_lifetime = timedelta(days=14)
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def start_page():
+    if request.method == 'POST':
+        if current_user.is_authenticated:
+            email = current_user.email
+        else:
+            email = request.form['email']
+
+        text = request.form['text']
+
+        if email == '':
+            flash('Напишите почту.',
+                  category='error')
+        elif text == '':
+            flash('Напишите вопрос или комментарий.',
+                  category='error')
+        else:
+            coment = Coments(DT=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                             email=email, coment=text)
+            try:
+                session.add(coment)
+                session.commit()
+            except Exception:
+                session.rollback()
+
     return render_template('index.html')
+
+#
+# @app.route('/', subdomain='admin')
+# def start_page_admin():
+#     return render_template('index.html')
 
 
 @app.route('/profile')
@@ -77,15 +106,25 @@ def profile():
     return render_template('profile.html')
 
 
-@app.route('/tests')
+@app.route('/tests/<id>')
 @login_required
-def tests():
-    return render_template('tests.html')
+def tests(id):
+    return render_template('tests.html', id=id)
 
 
-@app.route('/books')
-def books():
-    return render_template('books.html')
+# @app.route('/books')
+# def books():
+#     return render_template('books.html')
+
+
+@app.route('/books/<id>')
+def books_klass(id):
+    return render_template('books.html', id=id)
+
+
+@app.route('/articles/<id>')
+def articles_klass(id):
+    return render_template('articles.html', id=id)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -96,8 +135,6 @@ def login():
         if request.method == 'POST':
             email = request.form['email']
             user = session.query(Users).filter_by(email=email).first()
-            logging.warning(email)
-            logging.warning(user)
             if user is None:
                 flash('Некорректный логин или пароль', category='error')
             elif not user.check_password(request.form['password']):
@@ -115,7 +152,7 @@ def login():
 def registration():
     if request.method == 'POST':
         email = request.form['email']
-        role = 'Admin'
+        role = 'User'
 
         name = request.form['name']
         user_password = request.form['password']
@@ -131,10 +168,8 @@ def registration():
             try:
                 session.add(user)
                 session.commit()
-                logging.error(1)
             except Exception:
                 session.rollback()
-                logging.error(2)
             return redirect('/login')
 
     return render_template("registration.html")

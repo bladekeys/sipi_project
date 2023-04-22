@@ -35,18 +35,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     </style>
 
 </head>
@@ -54,70 +42,9 @@
 <body>
 <div style="text-align: center; margin-top: 100px;">
     <img class="text-align: center;" src="{{ url_for('static', filename='monkey.gif') }}" alt="404">
-    <h1 style="color: black;">Однажды здесь появится информация...</h1>
+    <h1 style="color: black;">Тут будут статьи и поддержка пагинации (мбмб) {{id}}</h1>
 </div>
-<div class="container">
-    <div class="books_profile border border-2 rounded-3 shadow p-3 mb-5 bg-body rounded">
-        <a class="books_text" href="/articles/all"><h2>Статьи</h2></a>
-        <hr>
-        <div>
-            <a class="books_text" href="/articles/5klass"><h3>5 класс</h3></a>
-        </div>
-        <div>
-            <a class="books_text" href="/articles/6klass"><h3>6 класс</h3></a>
-        </div>
-        <div>
-            <a class="books_text" href="/articles/7klass"><h3>7 класс</h3></a>
-        </div>
-        <div>
-            <a class="books_text" href="/articles/8klass"><h3>8 класс</h3></a>
-        </div>
-        <div>
-            <a class="books_text" href="/articles/9klass"><h3>9 класс</h3></a>
-        </div>
-    </div>
 
-    <div class="books_profile border border-2 rounded-3 shadow p-3 mb-5 bg-body rounded">
-        <a class="books_text" href="/books/all"><h2>Книги</h2></a>
-        <hr>
-        <div>
-            <a class="books_text" href="/books/5klass"><h3>5 класс</h3></a>
-        </div>
-        <div>
-            <a class="books_text" href="/books/6klass"><h3>6 класс</h3></a>
-        </div>
-        <div>
-            <a class="books_text" href="/books/7klass"><h3>7 класс</h3></a>
-        </div>
-        <div>
-            <a class="books_text" href="/books/8klass"><h3>8 класс</h3></a>
-        </div>
-        <div>
-            <a class="books_text" href="/books/9klass"><h3>9 класс</h3></a>
-        </div>
-    </div>
-
-
-    <div class="books_profile border border-2 rounded-3 shadow p-3 mb-5 bg-body rounded">
-        <a class="books_text" href="/tests/all"><h2>Тесты</h2></a>
-        <hr>
-        <div>
-            <a class="books_text" href="/tests/5klass"><h3>5 класс</h3></a>
-        </div>
-        <div>
-            <a class="books_text" href="/tests/6klass"><h3>6 класс</h3></a>
-        </div>
-        <div>
-            <a class="books_text" href="/tests/7klass"><h3>7 класс</h3></a>
-        </div>
-        <div>
-            <a class="books_text" href="/tests/8klass"><h3>8 класс</h3></a>
-        </div>
-        <div>
-            <a class="books_text" href="/tests/9klass"><h3>9 класс</h3></a>
-        </div>
-    </div>
-</div>
 <div class="comment_block">
     <form class="form_block border border-2 rounded-3 shadow p-3 mb-5 bg-body rounded" method="POST">
         {% if current_user.is_authenticated %}
@@ -134,6 +61,9 @@
                           style="min-height: 100px"></textarea>
             <label for="floatingTextarea2">Ваш вопрос или комментарий</label>
         </div>
+        {% for cat, msg in get_flashed_messages(True) %}
+        <div class="flash {{cat}} comment_text">{{msg}}</div>
+        {% endfor %}
         <p><input type="submit" class="btn btn-primary form-control" value="Отправить"/></p>
     </form>
 </div>

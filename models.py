@@ -35,6 +35,20 @@ Session = sa.orm.sessionmaker(engine)
 session = Session()
 
 
+class Coments(Base):
+    __tablename__ = sa.Table('Coments', metadata, autoload_with=engine)
+    id = sa.Column(sa.Integer, primary_key=True)
+    DT = sa.Column(sa.DateTime)
+    email = sa.Column(sa.String)
+    coment = sa.Column(sa.String)
+
+    def __init__(self, *, DT, email, coment):
+        super().__init__()
+        self.DT = DT
+        self.email = email
+        self.coment = coment
+
+
 class Tokens_db(Base):
     __tablename__ = sa.Table('Tokens', metadata, autoload_with=engine)
     id = sa.Column(sa.Integer, primary_key=True)
@@ -47,7 +61,7 @@ class Tokens_db(Base):
         self.DT = DT
         self.token = token
         self.secret = secret
-    
+
 
 class Users(UserMixin, Base):
     __tablename__ = sa.Table("Users", metadata, autoload_with=engine)
@@ -73,7 +87,6 @@ class Users(UserMixin, Base):
 
     def get_name(self):
         return self.name
-
 
 
 @login.user_loader
