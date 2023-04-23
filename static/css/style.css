@@ -24,7 +24,7 @@ font-family: Avenir !important;
 .container {
     display: grid;
     grid-gap: 30px;
-    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     align-items: center;
     justify-content: center;
 }
@@ -32,18 +32,28 @@ font-family: Avenir !important;
 .container_books {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, 140px);
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     align-items: center;
     justify-content: center;
+    margin: 50px;
 }
 
 .photo_profile {
-    padding-top: 20px;
     min-width: 150px;
-    max-width: 50%;
+    max-width: 300px;
     min-height: 150px;
     margin: 0 auto;
 }
+
+.photo_small {
+    clip-path: circle();
+    min-width: 10px;
+    max-width: 50px;
+    min-height: 10px;
+
+}
+
+
 
 .progress_profile {
     padding-top: 20px;
@@ -53,11 +63,13 @@ font-family: Avenir !important;
     margin: 0 auto;
 }
 
+
+
 .photo_profile_div {
     padding-top: 20px;
     min-width: 300px;
-    max-width: 100%;
-    min-height: 500px;
+    max-width: auto;
+    min-height: 600px;
 }
 
 .books_text {
@@ -68,7 +80,7 @@ font-family: Avenir !important;
 .books_profile {
     padding-top: 20px;
     min-width: 300px;
-    max-width: 30%;
+    width: 100%;
     min-height: 150px;
     margin: 0 auto;
     border: 1px solid;
@@ -76,8 +88,6 @@ font-family: Avenir !important;
     text-align: center;
     border-radius: 5px;
     margin: 5px auto;
-    align-items: center;
-    justify-content: center;
 }
 
 
@@ -114,7 +124,7 @@ font-family: Avenir !important;
 }
 
 .comment_block {
-    min-width: 400px;
+    min-width: 300px;
     min-height: 200px;
     max-width: 400px;
     max-height: 500px;

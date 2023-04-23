@@ -1,23 +1,23 @@
 # -*- coding: utf-8 -*-
 import logging
-from werkzeug.security import generate_password_hash
-from dotenv import load_dotenv
 import os
-import warnings
-from flask import Flask, render_template, Response, request, redirect, flash, Markup
-import pandas as pd
-from datetime import datetime, timedelta
 import urllib
+import warnings
+from datetime import datetime, timedelta
 import json
-from sqlalchemy import create_engine
+
+from flask import Flask, render_template, request, redirect, flash, Markup
 from flask_bootstrap import Bootstrap
 from flask_login import login_required, current_user, login_user, logout_user
-from models import Users, Coments, login, session
+from itsdangerous import SignatureExpired
+from sqlalchemy import create_engine
+from werkzeug.security import generate_password_hash
+
 from mail import Mail, tokens
-from itsdangerous import URLSafeSerializer, SignatureExpired
+from models import Users, Coments, login, session
 
 # load_dotenv(os.path.dirname(__file__)+".env")
-app = Flask(__name__, subdomain_matching=True)
+app = Flask(__name__)
 Bootstrap(app)
 mail = Mail()
 server = '194.58.123.127'
@@ -46,7 +46,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc:///?odbc_connect=%s" % par
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 app.config['SESSION_PERMANENT'] = True
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=14)
-#app.config['SERVER_NAME'] = 'domain.dom:5000'
+# app.config['SERVER_NAME'] = 'domain.dom:5000'
 # app.config['SESSION_COOKIE_SECURE'] = True
 # app.config['SESSION_COOKIE_HTTPONLY'] = True
 # app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
@@ -76,7 +76,6 @@ def start_page():
             email = request.form['email']
 
         text = request.form['text']
-
         if email == '':
             flash('Напишите почту.',
                   category='error')
@@ -85,8 +84,9 @@ def start_page():
                   category='error')
         else:
             coment = Coments(DT=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                             email=email, coment=text)
+                             email=email, coment=str(text))
             try:
+                mail.on_comment(email, text)
                 session.add(coment)
                 session.commit()
             except Exception:
@@ -94,16 +94,47 @@ def start_page():
 
     return render_template('index.html')
 
-#
-# @app.route('/', subdomain='admin')
-# def start_page_admin():
-#     return render_template('index.html')
 
-
-@app.route('/profile')
+@app.route('/profile', methods=['GET', 'POST'])
 @login_required
 def profile():
+    if request.method == 'POST':
+        current_user.set_photo(request.files['photo'])
+
     return render_template('profile.html')
+
+
+@app.route('/users', methods=['GET', 'POST'])
+@login_required
+def users():
+    if current_user.get_verified():
+        return render_template('email confirm.html')
+    all_users_list = []
+    if current_user.get_role() == 'Admin':
+        all_users = session.query(Users)
+        for user in all_users:
+            all_users_list.append({"name": user.name,
+                                   "email": user.email,
+                                   "role": user.role,
+                                   "verified": user.verified})
+    return render_template('users.html',
+                           all_users_list=json.dumps(all_users_list, ensure_ascii=False))
+
+
+@app.route('/coments', methods=['GET', 'POST'])
+@login_required
+def coments():
+    if current_user.get_verified():
+        return render_template('email confirm.html')
+    all_coments_list = []
+    if current_user.get_role() == 'Admin':
+        all_coments = session.query(Coments)
+        for com in all_coments:
+            all_coments_list.append({"DT": str(com.DT),
+                                     "email": '<a href="mailto:' + com.email + '">' + com.email + '</a>',
+                                     "coment": com.coment})
+    return render_template('coments.html',
+                           all_coments_list=json.dumps(all_coments_list, ensure_ascii=False))
 
 
 @app.route('/tests/<id>')
@@ -112,9 +143,12 @@ def tests(id):
     return render_template('tests.html', id=id)
 
 
-# @app.route('/books')
-# def books():
-#     return render_template('books.html')
+@app.route('/admin')
+@login_required
+def admin():
+    if not current_user.get_role() == 'Admin':
+        return redirect('/login')
+    return render_template('admin_index.html')
 
 
 @app.route('/books/<id>')
@@ -163,7 +197,8 @@ def registration():
         else:
             mail.register(email)
 
-            user = Users(email=email, name=name, role=role, verified=False)
+            user = Users(email=email, name=name, role=role,
+                         verified=False)
             user.set_password(user_password)
             try:
                 session.add(user)
@@ -192,7 +227,7 @@ def forget_password():
                 try:
                     session.add(user)
                     session.commit()
-                except:
+                except Exception:
                     session.rollback()
                     render_template('error.html', name=current_user.get_id())
                 return redirect('/login')
@@ -261,7 +296,7 @@ def klass5_2():
 
 
 @app.errorhandler(404)
-def page_not_found(e):
+def page_not_found():
     return render_template('access denied.html'), 404
 
 

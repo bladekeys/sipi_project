@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+
+{% extends 'base_admin.html' %}
+
+{% block title %}
+{% endblock %}
+
+
+{% block body %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/ajax_date.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
+
+
+    <style>
+    @font-face {
+	font-family: Avenir;
+	src: url( "{{ url_for('static', filename='AvenirNextCyr-Regular.ttf') }}" );
+    }
+
+    .font-base{
+    font-family: Avenir !important;
+    }
+
+
+    </style>
+
+</head>
+
+<style>
+body {
+	background: #eee !important;
+}
+
+@font-face {
+	font-family: Avenir;
+	src: url( "{{ url_for('static', filename='AvenirNextCyr-Regular.ttf') }}" );
+}
+
+@font-face {
+	font-family: Avenir_bold;
+	src: url( "{{ url_for('static', filename='AvenirNextCyr-Bold.ttf') }}" );
+}
+
+.center {
+font-family: Avenir_bold;
+  text-align: center;
+  padding: 60px;
+}
+
+    table {
+    font-family: Avenir;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #000000;
+        padding: 10px;
+    }
+
+
+</style>
+
+<script>
+    var personData;
+
+
+    window.onload = () => {
+        personData = {{all_users_list | tojson | safe}};
+        personData = JSON.parse(personData);
+        console.log(personData);
+        loadTableData(personData);
+    }
+
+    function loadTableData(personData) {
+        const tableBody = document.getElementById('tableData');
+        let dataHtml = '';
+
+        for(let person of personData) {
+            dataHtml += `<tr><td>${person.name}</td><td>${person.email}</td><td>${person.role}</td><td>${person.verified}</td></tr>`;
+        }
+
+        tableBody.innerHTML = dataHtml;
+    }
+
+</script>
+
+<body>
+<div class="center">
+    <table>
+        <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Email</th>
+            <th>Роль</th>
+            <th>Аккаунт <br> подтвержденный</th>
+        </tr>
+        </thead>
+        <tbody id="tableData"></tbody>
+    </table>
+</div>
+</body>
+
+{% endblock %}

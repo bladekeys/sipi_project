@@ -1,11 +1,13 @@
 import os
-from flask_login import UserMixin, LoginManager
-from werkzeug.security import generate_password_hash, check_password_hash
 import urllib
+from base64 import b64encode as enc64
+
 import sqlalchemy as sa
+from flask_login import UserMixin, LoginManager
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, declarative_base
-import logging
+from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.utils import secure_filename
 
 login = LoginManager()
 
@@ -71,6 +73,9 @@ class Users(UserMixin, Base):
     password = sa.Column(sa.String)
     role = sa.Column(sa.String)
     verified = sa.Column(sa.Boolean)
+    img = sa.Column(sa.BLOB)
+    img_name = sa.Column(sa.String)
+    mimetype = sa.Column(sa.String)
 
     def __init__(self, *, name, email, role, verified):
         super().__init__()
@@ -87,6 +92,27 @@ class Users(UserMixin, Base):
 
     def get_name(self):
         return self.name
+
+    def get_role(self):
+        return self.role
+
+    def get_verified(self):
+        return not self.verified
+
+    def get_photo(self):
+        if self.img is None:
+            return "None"
+        else:
+            binary = enc64(self.img).decode()
+            return binary
+
+    def set_photo(self, photo):
+        session.query(Users) \
+            .filter_by(email=self.email) \
+            .update({'img': photo.read(),
+                     'img_name': secure_filename(photo.filename),
+                     'mimetype': photo.mimetype})
+        session.commit()
 
 
 @login.user_loader

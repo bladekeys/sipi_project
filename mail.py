@@ -86,3 +86,42 @@ class Mail:
         server.sendmail(email_from, to, msg.as_string())
 
         server.quit()
+
+    @staticmethod
+    def on_comment(email, coment):
+        server = smtp.SMTP_SSL('smtp.yandex.com')
+        server.set_debuglevel(1)
+        email_from = "schoolmathsite@yandex.ru"
+        server.set_debuglevel(1)
+        server.ehlo(email_from)
+        server.login(email_from, email_password)
+        server.auth_plain()
+        msg = MIMEMultipart()
+
+        html = """\
+                                                <html>
+                                                  <head></head>
+                                                  <body>
+                                                    <p>Здравствуйте!<br>
+                                                     <br>
+                                                       Вы написали нам: {}.
+                                                       
+                                                       <br>
+                                                       В ближайшее время мы ознакомимся с сообщением и ответим Вам!
+
+                                                       <br>Письмо сформировано автоматически и не требует ответа.</br>
+                                                    </p>
+                                                  </body>
+                                                </html>
+                                                """.format(str(coment))
+
+        msg.attach(MIMEText(html, 'html'))
+        to = email
+
+        msg['Subject'] = "Математический сайт. Ваш комментарий."
+        msg['From'] = email_from
+        msg['To'] = to
+
+        server.sendmail(email_from, to, msg.as_string())
+
+        server.quit()

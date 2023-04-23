@@ -32,6 +32,9 @@
     .font-base{
     font-family: Avenir !important;
     }
+
+
+
     </style>
 </head>
 
@@ -39,11 +42,25 @@
 <div style="text-align: center; margin-top: 100px;">
     <h1 style="color: black;">Профиль</h1>
     <div class="container">
-        <div class="photo_profile_div">
+        <div class="photo_profile_div border border-2 rounded-3 shadow p-3 mb-5 bg-body rounded">
+            {% if current_user.get_photo() == "None" %}
             <img class="photo_profile" src="{{ url_for('static', filename='profile.png') }}">
+            {% else %}
+            <img class="photo_profile" src="data:{{current_user.mimetype}};base64,{{current_user.get_photo()}} ">
+            {% endif %}
+            <form enctype="multipart/form-data" method="POST">
+                <div class="w-auto mx-auto p-2" style="display: flex;">
+                    <input class="form-control" name="photo" type="file" multiple accept="image/*,image/jpeg">
+                    <button type="submit" class="btn btn-primary">Загрузить</button>
+                </div>
+            </form>
             <h4>{{current_user.name | safe}}</h4>
             <br>
-            <h5>Почта: {{current_user.email}}</h5>
+            <h5>Почта: {{current_user.email | safe}}</h5>
+            {% if current_user.get_role() == 'Admin' %}
+            <h5>Админ</h5>
+            {% else %}
+            {% endif %}
             {% if current_user.verified %}
             <h5>Почта подтверждена</h5>
             {% else %}
@@ -51,6 +68,8 @@
             {% endif %}
             <a href="/forget_password"><h5>Поменять пароль</h5></a>
         </div>
+        {% if current_user.get_role() == 'Admin' %}
+        {% else %}
         <div class="progress_profile">
             <a href="/tests"><h2>Тесты</h2></a>
             <p>Общий прогресс по тестам за 5 класс</p>
@@ -84,6 +103,7 @@
             </div>
             <br>
         </div>
+        {% endif %}
     </div>
 </div>
 
