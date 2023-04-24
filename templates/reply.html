@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница сайта по математике для средней школы
+{% endblock %}
+
+
+{% block body %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/ajax_date.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
+
+    <style>
+
+    .font-base{
+    font-family: Avenir !important;
+    }
+
+    .center {
+font-family: Avenir_bold;
+  text-align: center;
+  padding: 5px;
+  margin: 15px;
+}
+
+.form-signin {
+  border-radius: 50px;
+  max-width: 400px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.wrapper {
+border-radius: 10px;
+	margin-top: 80px;
+  margin-bottom: 80px;
+
+  .font-control{
+font-family: Avenir;
+font-size: medium;
+}
+
+
+    </style>
+
+</head>
+
+<div class="wrapper">
+    <form class="form-signin" method="POST">
+        <div>
+            <h5>Email</h5>
+            <input type="email" class="font-control form-control" name="email" value="{{email}}" disabled/>
+        </div>
+        <h5>Комментарий</h5>
+        <div>
+            <input type="text" class="font-control form-control" name="name" value="{{coment}}" disabled/>
+        </div>
+        <h5>Ответ на комментарий</h5>
+        <div style="margin-bottom: 15px;">
+            <textarea class="form-control" name="answer">Здравствуйте, </textarea>
+        </div>
+        <p><input style="width:100%" type="submit" class="font-control btn btn-primary" value="Отправить"/></p>
+    </form>
+</div>
+
+
+{% endblock %}

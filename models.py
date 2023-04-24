@@ -43,12 +43,14 @@ class Coments(Base):
     DT = sa.Column(sa.DateTime)
     email = sa.Column(sa.String)
     coment = sa.Column(sa.String)
+    replied = sa.Column(sa.Boolean)
 
     def __init__(self, *, DT, email, coment):
         super().__init__()
         self.DT = DT
         self.email = email
         self.coment = coment
+        self.replied = False
 
 
 class Tokens_db(Base):
@@ -101,7 +103,7 @@ class Users(UserMixin, Base):
 
     def get_photo(self):
         if self.img is None:
-            return "None"
+            return None
         else:
             binary = enc64(self.img).decode()
             return binary

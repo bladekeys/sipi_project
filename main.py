@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
+import json
 import logging
 import os
 import urllib
 import warnings
 from datetime import datetime, timedelta
-import json
 
-from flask import Flask, render_template, request, redirect, flash, Markup
+from flask import Flask, render_template, request, redirect, flash, Markup, abort
 from flask_bootstrap import Bootstrap
 from flask_login import login_required, current_user, login_user, logout_user
 from itsdangerous import SignatureExpired
@@ -46,10 +46,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc:///?odbc_connect=%s" % par
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 app.config['SESSION_PERMANENT'] = True
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=14)
-# app.config['SERVER_NAME'] = 'domain.dom:5000'
 # app.config['SESSION_COOKIE_SECURE'] = True
-# app.config['SESSION_COOKIE_HTTPONLY'] = True
-# app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
+app.config['SESSION_COOKIE_HTTPONLY'] = True
+app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 # app.config['USE_X_SENDFILE'] = True
 
 mydb = create_engine(app.config['SQLALCHEMY_DATABASE_URI'])
@@ -83,8 +82,7 @@ def start_page():
             flash('Напишите вопрос или комментарий.',
                   category='error')
         else:
-            coment = Coments(DT=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                             email=email, coment=str(text))
+            coment = Coments(DT=datetime.now().strftime("%Y-%m-%d %H:%M:%S"), email=email, coment=str(text))
             try:
                 mail.on_comment(email, text)
                 session.add(coment)
@@ -104,7 +102,7 @@ def profile():
     return render_template('profile.html')
 
 
-@app.route('/users', methods=['GET', 'POST'])
+@app.route('/admin/users', methods=['GET', 'POST'])
 @login_required
 def users():
     if current_user.get_verified():
@@ -116,30 +114,74 @@ def users():
             all_users_list.append({"name": user.name,
                                    "email": user.email,
                                    "role": user.role,
-                                   "verified": user.verified})
+                                   "verified": 'Да' if user.verified else 'Нет'})
     return render_template('users.html',
                            all_users_list=json.dumps(all_users_list, ensure_ascii=False))
 
 
-@app.route('/coments', methods=['GET', 'POST'])
+@app.route('/admin/coments', methods=['GET', 'POST'])
 @login_required
 def coments():
     if current_user.get_verified():
         return render_template('email confirm.html')
     all_coments_list = []
     if current_user.get_role() == 'Admin':
-        all_coments = session.query(Coments)
+        all_coments = session.query(Coments).order_by(Coments.DT)
         for com in all_coments:
             all_coments_list.append({"DT": str(com.DT),
-                                     "email": '<a href="mailto:' + com.email + '">' + com.email + '</a>',
-                                     "coment": com.coment})
+                                     "email": com.email,
+                                     "coment": com.coment,
+                                     "is_replied": 'Да' if com.replied else 'Нет',
+                                     "reply": "<a href='/admin/reply/" + com.email + "/" + str(com.id) + "'>"
+                                                                                                         "Ответить на вопрос</a>"})
     return render_template('coments.html',
                            all_coments_list=json.dumps(all_coments_list, ensure_ascii=False))
 
 
-@app.route('/tests/<id>')
+@app.route('/admin/reply/<email>/<id>', methods=['GET', 'POST'])
+@login_required
+def reply(email, id):
+    if current_user.get_verified():
+        return render_template('email confirm.html')
+    session_comment = session.query(Coments.coment).filter_by(email=email, id=id).one_or_none()[0]
+    if current_user.get_role() == 'Admin':
+        if request.method == 'POST':
+            answer = request.form['answer']
+            mail.reply(email, session_comment, answer, current_user.name)
+            session.query(Coments).filter_by(email=email, id=id).update({"replied": True})
+            session.commit()
+            return redirect('/admin/coments')
+
+    return render_template('reply.html', email=email, coment=session_comment)
+
+
+@app.route('/tests/<id>', methods=['GET', 'POST'])
 @login_required
 def tests(id):
+    if id not in ['5klass', '6klass', '7klass', '8klass', '9klass', 'all']:
+        abort(404)
+    else:
+        if request.method == 'POST':
+            if current_user.is_authenticated:
+                email = current_user.email
+            else:
+                email = request.form['email']
+
+            text = request.form['text']
+            if email == '':
+                flash('Напишите почту.',
+                      category='error')
+            elif text == '':
+                flash('Напишите вопрос или комментарий.',
+                      category='error')
+            else:
+                coment = Coments(DT=datetime.now().strftime("%Y-%m-%d %H:%M:%S"), email=email, coment=str(text))
+                try:
+                    mail.on_comment(email, text)
+                    session.add(coment)
+                    session.commit()
+                except Exception:
+                    session.rollback()
     return render_template('tests.html', id=id)
 
 
@@ -148,16 +190,67 @@ def tests(id):
 def admin():
     if not current_user.get_role() == 'Admin':
         return redirect('/login')
-    return render_template('admin_index.html')
+    new_users = '?'
+    day_tests = '?'
+    unreplied = session.query(Coments.id).filter_by(replied=False).count()
+    return render_template('admin_index.html', new_users=new_users, unreplied=unreplied, day_tests=day_tests)
 
 
-@app.route('/books/<id>')
+@app.route('/books/<id>', methods=['GET', 'POST'])
 def books_klass(id):
+    if id not in ['5klass', '6klass', '7klass', '8klass', '9klass', 'all']:
+        abort(404)
+    else:
+        if request.method == 'POST':
+            if current_user.is_authenticated:
+                email = current_user.email
+            else:
+                email = request.form['email']
+
+            text = request.form['text']
+            if email == '':
+                flash('Напишите почту.',
+                      category='error')
+            elif text == '':
+                flash('Напишите вопрос или комментарий.',
+                      category='error')
+            else:
+                coment = Coments(DT=datetime.now().strftime("%Y-%m-%d %H:%M:%S"), email=email, coment=str(text))
+                try:
+                    mail.on_comment(email, text)
+                    session.add(coment)
+                    session.commit()
+                except Exception:
+                    session.rollback()
     return render_template('books.html', id=id)
 
 
-@app.route('/articles/<id>')
+@app.route('/articles/<id>', methods=['GET', 'POST'])
 def articles_klass(id):
+    if id not in ['5klass', '6klass', '7klass', '8klass', '9klass', 'all']:
+        abort(404)
+    else:
+        if request.method == 'POST':
+            if current_user.is_authenticated:
+                email = current_user.email
+            else:
+                email = request.form['email']
+
+            text = request.form['text']
+            if email == '':
+                flash('Напишите почту.',
+                      category='error')
+            elif text == '':
+                flash('Напишите вопрос или комментарий.',
+                      category='error')
+            else:
+                coment = Coments(DT=datetime.now().strftime("%Y-%m-%d %H:%M:%S"), email=email, coment=str(text))
+                try:
+                    mail.on_comment(email, text)
+                    session.add(coment)
+                    session.commit()
+                except Exception:
+                    session.rollback()
     return render_template('articles.html', id=id)
 
 
@@ -296,7 +389,7 @@ def klass5_2():
 
 
 @app.errorhandler(404)
-def page_not_found():
+def page_not_found(e):
     return render_template('access denied.html'), 404
 
 

@@ -156,7 +156,7 @@
                     </ul>
                 </li>
             </ul>
-            {% if current_user.get_photo() == "None" %}
+            {% if current_user.get_photo() == None %}
             <a href="/profile"><img class="photo_small nav-item" src="{{ url_for('static', filename='profile.png') }}"></a>
             {% else %}
             <a href="/profile"><img class="photo_small nav-item" src="data:{{current_user.mimetype}};base64,{{current_user.get_photo()}} "></a>

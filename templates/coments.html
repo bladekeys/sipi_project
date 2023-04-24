@@ -4,6 +4,7 @@
 {% extends 'base_admin.html' %}
 
 {% block title %}
+Комментарии и вопросы пользователей
 {% endblock %}
 
 
@@ -88,7 +89,7 @@ font-family: Avenir_bold;
         let dataHtml = '';
 
         for(let coment of comentData) {
-            dataHtml += `<tr><td>${coment.DT}</td><td>${coment.email}</td><td>${coment.coment}</td></tr>`;
+            dataHtml += `<tr><td>${coment.DT}</td><td>${coment.email}</td><td>${coment.coment}</td><td>${coment.is_replied}</td><td>${coment.reply}</td></tr>`;
         }
 
         tableBody.innerHTML = dataHtml;
@@ -104,6 +105,8 @@ font-family: Avenir_bold;
             <th>Дата комментария</th>
             <th>Email</th>
             <th>Комментарий</th>
+            <th>Отвечено</th>
+            <th>Ответить на вопрос</th>
         </tr>
         </thead>
         <tbody id="tableData"></tbody>
