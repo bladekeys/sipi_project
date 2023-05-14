@@ -133,7 +133,7 @@ def coments():
                                      "coment": com.coment,
                                      "is_replied": 'Да' if com.replied else 'Нет',
                                      "reply": "<a href='/admin/reply/" + com.email + "/" + str(com.id) + "'>"
-                                                                                                         "Ответить на вопрос</a>"})
+                                                                                                         "Ответить</a>"})
     return render_template('coments.html',
                            all_coments_list=json.dumps(all_coments_list, ensure_ascii=False))
 
@@ -155,10 +155,10 @@ def reply(email, id):
     return render_template('reply.html', email=email, coment=session_comment)
 
 
-@app.route('/tests/<id>', methods=['GET', 'POST'])
+@app.route('/tests/<klass>', methods=['GET', 'POST'])
 @login_required
-def tests(id):
-    if id not in ['5klass', '6klass', '7klass', '8klass', '9klass', 'all']:
+def tests(klass):
+    if klass not in ['5klass', '6klass', '7klass', '8klass', '9klass', 'all']:
         abort(404)
     else:
         if request.method == 'POST':
@@ -182,7 +182,169 @@ def tests(id):
                     session.commit()
                 except Exception:
                     session.rollback()
-    return render_template('tests.html', id=id)
+    return render_template('tests.html', id=klass)
+
+
+@app.route('/tests/<klass>/<test_id>', methods=['GET', 'POST'])
+@login_required
+def test_template(klass, test_id):
+    if current_user.get_verified():
+        return render_template('email confirm.html')
+
+    if klass not in ['5klass', '6klass', '7klass', '8klass', '9klass', 'all']:
+        abort(404)
+    else:
+        with open("{}/static/tests_json/{}/{}.json".format(root_folder, klass, test_id), 'r',
+                  encoding='UTF-8') as f_json:
+            json_file = json.load(f_json)
+
+    return render_template('quiz.html', questions_json=json_file)
+
+
+@app.route('/admin/tests', methods=['GET', 'POST'])
+@login_required
+def admin_test_all():
+    return render_template('admin_tests_all.html')
+
+
+@app.route('/admin/tests/<klass>/<test_id>', methods=['GET', 'POST'])
+@login_required
+def admin_test_template(klass, test_id):
+    if klass not in ['5klass', '6klass', '7klass', '8klass', '9klass', 'all']:
+        abort(404)
+    else:
+        with open("{}/static/tests_json/{}/{}.json".format(root_folder, klass, test_id), 'r',
+                  encoding='UTF-8') as f_json:
+            json_file = json.load(f_json)
+
+    if request.method == 'POST':
+        name_of_test = request.form['name_of_test']
+
+        # 1 вопрос
+        q1 = request.form['q1']
+        q1a1 = request.form['q1a1']
+        q1a2 = request.form['q1a2']
+        q1a3 = request.form['q1a3']
+        q1a4 = request.form['q1a4']
+        q1c1 = 0 if request.form.get('q1c1') is None else 1
+        q1c2 = 0 if request.form.get('q1c2') is None else 1
+        q1c3 = 0 if request.form.get('q1c3') is None else 1
+        q1c4 = 0 if request.form.get('q1c4') is None else 1
+
+        # 2 вопрос
+        q2 = request.form['q2']
+        q2a1 = request.form['q2a1']
+        q2a2 = request.form['q2a2']
+        q2a3 = request.form['q2a3']
+        q2a4 = request.form['q2a4']
+        q2c1 = 0 if request.form.get('q2c1') is None else 1
+        q2c2 = 0 if request.form.get('q2c2') is None else 1
+        q2c3 = 0 if request.form.get('q2c3') is None else 1
+        q2c4 = 0 if request.form.get('q2c4') is None else 1
+
+        # 3 вопрос
+        q3 = request.form['q3']
+        q3a1 = request.form['q3a1']
+        q3a2 = request.form['q3a2']
+        q3a3 = request.form['q3a3']
+        q3a4 = request.form['q3a4']
+        q3c1 = 0 if request.form.get('q3c1') is None else 1
+        q3c2 = 0 if request.form.get('q3c2') is None else 1
+        q3c3 = 0 if request.form.get('q3c3') is None else 1
+        q3c4 = 0 if request.form.get('q3c4') is None else 1
+
+        # 4 вопрос
+        q4 = request.form['q4']
+        q4a1 = request.form['q4a1']
+        q4a2 = request.form['q4a2']
+        q4a3 = request.form['q4a3']
+        q4a4 = request.form['q4a4']
+        q4c1 = 0 if request.form.get('q4c1') is None else 1
+        q4c2 = 0 if request.form.get('q4c2') is None else 1
+        q4c3 = 0 if request.form.get('q4c3') is None else 1
+        q4c4 = 0 if request.form.get('q4c4') is None else 1
+
+        # 5 вопрос
+        q5 = request.form['q5']
+        q5a1 = request.form['q5a1']
+        q5a2 = request.form['q5a2']
+        q5a3 = request.form['q5a3']
+        q5a4 = request.form['q5a4']
+        q5c1 = 0 if request.form.get('q5c1') is None else 1
+        q5c2 = 0 if request.form.get('q5c2') is None else 1
+        q5c3 = 0 if request.form.get('q5c3') is None else 1
+        q5c4 = 0 if request.form.get('q5c4') is None else 1
+
+        # запись в файл
+        json_file["data"][0]['name'] = name_of_test
+
+        # 1 вопрос
+        json_file["data"][0]['question'] = q1
+        json_file["data"][0]['answers'][0]['answer'] = q1a1
+        json_file["data"][0]['answers'][1]['answer'] = q1a2
+        json_file["data"][0]['answers'][2]['answer'] = q1a3
+        json_file["data"][0]['answers'][3]['answer'] = q1a4
+        json_file["data"][0]['answers'][0]['is_correct'] = q1c1
+        json_file["data"][0]['answers'][1]['is_correct'] = q1c2
+        json_file["data"][0]['answers'][2]['is_correct'] = q1c3
+        json_file["data"][0]['answers'][3]['is_correct'] = q1c4
+
+        # 2 вопрос
+        json_file["data"][1]['question'] = q2
+        json_file["data"][1]['answers'][0]['answer'] = q2a1
+        json_file["data"][1]['answers'][1]['answer'] = q2a2
+        json_file["data"][1]['answers'][2]['answer'] = q2a3
+        json_file["data"][1]['answers'][3]['answer'] = q2a4
+        json_file["data"][1]['answers'][0]['is_correct'] = q2c1
+        json_file["data"][1]['answers'][1]['is_correct'] = q2c2
+        json_file["data"][1]['answers'][2]['is_correct'] = q2c3
+        json_file["data"][1]['answers'][3]['is_correct'] = q2c4
+
+        # 3 вопрос
+        try:
+            json_file["data"][2]['question'] = q3
+            json_file["data"][2]['answers'][0]['answer'] = q3a1
+            json_file["data"][2]['answers'][1]['answer'] = q3a2
+            json_file["data"][2]['answers'][2]['answer'] = q3a3
+            json_file["data"][2]['answers'][3]['answer'] = q3a4
+            json_file["data"][2]['answers'][0]['is_correct'] = q3c1
+            json_file["data"][2]['answers'][1]['is_correct'] = q3c2
+            json_file["data"][2]['answers'][2]['is_correct'] = q3c3
+            json_file["data"][2]['answers'][3]['is_correct'] = q3c4
+        except Exception as e:
+            pass
+
+        try:
+            json_file["data"][3]['question'] = q4
+            json_file["data"][3]['answers'][0]['answer'] = q4a1
+            json_file["data"][3]['answers'][1]['answer'] = q4a2
+            json_file["data"][3]['answers'][2]['answer'] = q4a3
+            json_file["data"][3]['answers'][3]['answer'] = q4a4
+            json_file["data"][3]['answers'][0]['is_correct'] = q4c1
+            json_file["data"][3]['answers'][1]['is_correct'] = q4c2
+            json_file["data"][3]['answers'][2]['is_correct'] = q4c3
+            json_file["data"][3]['answers'][3]['is_correct'] = q4c4
+        except Exception as e:
+            pass
+
+        try:
+            json_file["data"][4]['question'] = q5
+            json_file["data"][4]['answers'][0]['answer'] = q5a1
+            json_file["data"][4]['answers'][1]['answer'] = q5a2
+            json_file["data"][4]['answers'][2]['answer'] = q5a3
+            json_file["data"][4]['answers'][3]['answer'] = q5a4
+            json_file["data"][4]['answers'][0]['is_correct'] = q5c1
+            json_file["data"][4]['answers'][1]['is_correct'] = q5c2
+            json_file["data"][4]['answers'][2]['is_correct'] = q5c3
+            json_file["data"][4]['answers'][3]['is_correct'] = q5c4
+        except Exception:
+            pass
+
+        with open("{}/static/tests_json/{}/{}.json".format(root_folder, klass, test_id), 'w',
+                  encoding='UTF-8') as f_json:
+            json.dump(json_file, f_json)
+
+    return render_template('admin_tests_edit.html', questions_json=json_file)
 
 
 @app.route('/admin')
@@ -225,9 +387,9 @@ def books_klass(id):
     return render_template('books.html', id=id)
 
 
-@app.route('/articles/<id>', methods=['GET', 'POST'])
-def articles_klass(id):
-    if id not in ['5klass', '6klass', '7klass', '8klass', '9klass', 'all']:
+@app.route('/articles/<klass>/<theme>', methods=['GET', 'POST'])
+def articles_klass(klass):
+    if klass not in ['5klass', '6klass', '7klass', '8klass', '9klass', 'all']:
         abort(404)
     else:
         if request.method == 'POST':
@@ -251,7 +413,7 @@ def articles_klass(id):
                     session.commit()
                 except Exception:
                     session.rollback()
-    return render_template('articles.html', id=id)
+    return render_template('articles.html', id=klass)
 
 
 @app.route('/login', methods=['GET', 'POST'])

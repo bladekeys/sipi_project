@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ru">
+
+{% extends 'base_admin.html' %}
+
+{% block title %}
+{% endblock %}
+
+
+{% block body %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/ajax_date.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
+
+
+    <style>
+    @font-face {
+	font-family: Avenir;
+	src: url( "{{ url_for('static', filename='AvenirNextCyr-Regular.ttf') }}" );
+    }
+
+    .font-base{
+    font-family: Avenir !important;
+    }
+
+
+    .wrapper {
+border-radius: 10px;
+	margin-top: 80px;
+  margin-bottom: 8
+  }
+
+  .form-signin {
+  border-radius: 50px;
+  max-width: 400px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+    </style>
+
+</head>
+
+<script type="text/javascript">
+            var questions_json = {{questions_json | tojson | safe}};
+
+
+
+
+
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename= 'js/admin_test.js') }}"></script>
+
+<body>
+<div class="wrapper">
+    <form class="form-signin" method="POST">
+        <div>
+            <h5>Название теста</h5>
+            <input class="font-control form-control" name="name_of_test" id="name_of_test"/>
+        </div>
+        <h4>Вопросы и ответы</h4>
+        <div>
+            <h5>1 вопрос</h5>
+            <input class="font-control form-control" name="q1" id="q1"/>
+            <h6>Ответы</h6>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q1a1" id="q1a1"/>
+                <input type="checkbox" id="q1c1" name="q1c1" checked>
+            </div>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q1a2" id="q1a2"/>
+                <input type="checkbox" id="q1c2" name="q1c2" checked>
+            </div>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q1a3" id="q1a3"/>
+                <input type="checkbox" id="q1c3" name="q1c3" checked>
+            </div>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q1a4" id="q1a4"/>
+                <input type="checkbox" id="q1c4" name="q1c4" checked>
+            </div>
+        </div>
+        <div>
+            <h5>2 вопрос</h5>
+            <input class="font-control form-control" name="q2" id="q2"/>
+            <h6>Ответы</h6>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q2a1" id="q2a1"/>
+                <input type="checkbox" id="q2c1" name="q2c1">
+            </div>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q2a2" id="q2a2"/>
+                <input type="checkbox" id="q2c2" name="q2c2">
+            </div>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q2a3" id="q2a3"/>
+                <input type="checkbox" id="q2c3" name="q2c3">
+            </div>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q2a4" id="q2a4"/>
+                <input type="checkbox" id="q2c4" name="q2c4">
+            </div>
+        </div>
+        <div>
+            <h5>3 вопрос</h5>
+            <input class="font-control form-control" name="q3" id="q3"/>
+            <h6>Ответы</h6>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q3a1" id="q3a1"/>
+                <input type="checkbox" id="q3c1" name="q3c1">
+            </div>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q3a2" id="q3a2"/>
+                <input type="checkbox" id="q3c2" name="q3c2">
+            </div>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q3a3" id="q3a3"/>
+                <input type="checkbox" id="q3c3" name="q3c3">
+            </div>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q3a4" id="q3a4"/>
+                <input type="checkbox" id="q3c4" name="q3c4">
+            </div>
+        </div>
+        <div>
+            <h5>4 вопрос</h5>
+            <input class="font-control form-control" name="q4" id="q4"/>
+            <h6>Ответы</h6>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q4a1" id="q4a1"/>
+                <input type="checkbox" id="q4c1" name="q4c1">
+            </div>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q4a2" id="q4a2"/>
+                <input type="checkbox" id="q4c2" name="q4c2">
+            </div>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q4a3" id="q4a3"/>
+                <input type="checkbox" id="q4c3" name="q4c3">
+            </div>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q4a4" id="q4a4"/>
+                <input type="checkbox" id="q4c4" name="q4c4">
+            </div>
+        </div>
+        <div>
+            <h5>5 вопрос</h5>
+            <input class="font-control form-control" name="q5" id="q5"/>
+            <h6>Ответы</h6>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q5a1" id="q5a1"/>
+                <input type="checkbox" id="q5c1" name="q5c1">
+            </div>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q5a2" id="q5a2"/>
+                <input type="checkbox" id="q5c2" name="q5c2">
+            </div>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q5a3" id="q5a3"/>
+                <input type="checkbox" id="q5c3" name="q5c3">
+            </div>
+            <div style="display: flex;">
+                <input class="font-control form-control" name="q5a4" id="q5a4"/>
+                <input type="checkbox" id="q5c4" name="q5c4">
+            </div>
+        </div>
+        <p>
+            <input style="width:100%" type="submit" class="font-control btn btn-primary" value="Сохранить"/>
+        </p>
+    </form>
+</div>
+</body>
+
+<script type="text/javascript">
+            var questions_json = {{questions_json | tojson | safe}};
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename= 'js/admin_test.js') }}"></script>
+
+{% endblock %}

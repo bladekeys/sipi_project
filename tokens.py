@@ -1,12 +1,21 @@
-from itsdangerous import URLSafeSerializer, SignatureExpired
 import random
-from models import session, Tokens_db
 from datetime import datetime
+
+from itsdangerous import URLSafeSerializer, SignatureExpired
+
+from models import session, Tokens_db
 
 
 class Tokens:
+    """!
+    Класс создания токенов для отправки ссылок через почту и расшифровки
+    """
+
     @staticmethod
     def secret_key():
+        """! Создает секретный ключ
+        \return Секретный ключ и объект
+        """
         keys = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
                 "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
                 "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
@@ -21,6 +30,13 @@ class Tokens:
         return secret, secret_object
 
     def create(self, email, salt):
+        """! Создает токен
+        \param self Обращение к экземпляру класса
+        \param email Почта
+        \param salt Код шифровки
+        \return 0
+        """
+
         secret, secret_object = self.secret_key()
         token = secret_object.dumps(email, salt=salt)
         try:
@@ -34,6 +50,11 @@ class Tokens:
 
     @staticmethod
     def decrypt(token, salt):
+        """! Расшифровывает токен
+        \param token Токен приходит с почты
+        \param salt Код расшифровки
+        \return email Расшифрованный
+        """
         user = session.query(Tokens_db).filter_by(token=token).one()
         if user is not None:
             user_secret = user.secret

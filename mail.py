@@ -13,8 +13,15 @@ tokens = Tokens()
 
 
 class Mail:
+    """! Класс отправки писем на почту
+
+    """
     @staticmethod
     def recovery(email):
+        """!Восстановление пароля
+        \param email
+        \return 0
+        """
         server = smtp.SMTP_SSL('smtp.yandex.com')
         server.set_debuglevel(1)
         email_from = "schoolmathsite@yandex.ru"
@@ -52,6 +59,12 @@ class Mail:
 
     @staticmethod
     def register(email):
+
+        """! Отправление письма на почту
+        \param email
+        \return 0
+        """
+
         server = smtp.SMTP_SSL('smtp.yandex.com')
         server.set_debuglevel(1)
         email_from = "schoolmathsite@yandex.ru"
@@ -89,6 +102,11 @@ class Mail:
 
     @staticmethod
     def on_comment(email, coment):
+        """! Автописьмо на комментарий
+        \param email
+        \param coment
+        \return 0
+        """
         server = smtp.SMTP_SSL('smtp.yandex.com')
         server.set_debuglevel(1)
         email_from = "schoolmathsite@yandex.ru"
@@ -128,6 +146,13 @@ class Mail:
 
     @staticmethod
     def reply(email, coment, answer, admin_name):
+        """! Ответное письмо на комментарий от Админа
+        \param email
+        \param coment
+        \param answer
+        \param admin_name
+        \return 0
+        """
         server = smtp.SMTP_SSL('smtp.yandex.com')
         server.set_debuglevel(1)
         email_from = "schoolmathsite@yandex.ru"

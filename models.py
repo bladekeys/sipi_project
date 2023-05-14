@@ -38,6 +38,7 @@ session = Session()
 
 
 class Coments(Base):
+    """! Класс комментариев для записи и выгрузки из БД"""
     __tablename__ = sa.Table('Coments', metadata, autoload_with=engine)
     id = sa.Column(sa.Integer, primary_key=True)
     DT = sa.Column(sa.DateTime)
@@ -46,6 +47,7 @@ class Coments(Base):
     replied = sa.Column(sa.Boolean)
 
     def __init__(self, *, DT, email, coment):
+        """! Конструктор класса комментариев"""
         super().__init__()
         self.DT = DT
         self.email = email
@@ -54,6 +56,7 @@ class Coments(Base):
 
 
 class Tokens_db(Base):
+    """! Класс токенов для записи и выгрузки из БД"""
     __tablename__ = sa.Table('Tokens', metadata, autoload_with=engine)
     id = sa.Column(sa.Integer, primary_key=True)
     DT = sa.Column(sa.DateTime)
@@ -61,6 +64,7 @@ class Tokens_db(Base):
     secret = sa.Column(sa.String)
 
     def __init__(self, *, DT, token, secret):
+        """! Конструктор класса токенов"""
         super().__init__()
         self.DT = DT
         self.token = token
@@ -68,6 +72,7 @@ class Tokens_db(Base):
 
 
 class Users(UserMixin, Base):
+    """! Класс пользователей для записи и выгрузки из БД"""
     __tablename__ = sa.Table("Users", metadata, autoload_with=engine)
     id = sa.Column(sa.Integer, primary_key=True)
     name = sa.Column(sa.String)
@@ -80,6 +85,7 @@ class Users(UserMixin, Base):
     mimetype = sa.Column(sa.String)
 
     def __init__(self, *, name, email, role, verified):
+        """! Конструктор класса пользователей"""
         super().__init__()
         self.name = name
         self.email = email
