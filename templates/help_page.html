@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница сайта по математике для средней школы
+{% endblock %}
+
+
+{% block body %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/ajax_date.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
+
+    <style>
+    @font-face {
+	font-family: Avenir;
+	src: url( "{{ url_for('static', filename='AvenirNextCyr-Regular.ttf') }}" );
+    }
+
+    .font-base{
+    font-family: Avenir !important;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+<div class="container" style="text-align: center; margin-top: 100px;">
+    <div class="books_profile border border-2 rounded-3 shadow p-3 mb-5 bg-body rounded">
+        <h3>
+            Пользователь может посмотреть книги, статьи и решать тесты для школьников 5-9 классов.
+            Тесты можно решать только зарегистрировавшись. Во время регистрации пользователю придет письмо на почту,
+            которою он указал.
+            У сайта есть встроенный поиск по статьям. Также можно написать комментарий админам, которые оперативно
+            отреагируют на сообщение пользователя
+        </h3>
+    </div>
+</div>
+<div class="container" style="text-align: center; margin-top: 100px;">
+    <div class="books_profile border border-2 rounded-3 shadow p-3 mb-5 bg-body rounded">
+        <h2>Контакты</h2>
+        <h3>Почта: schoolmathsite@yandex.ru</h3>
+    </div>
+</div>
+<!--<div class="container">-->
+<!--    <div class="books_profile border border-2 rounded-3 shadow p-3 mb-5 bg-body rounded">-->
+<!--        <a class="books_text" href="/articles/all"><h2>Статьи</h2></a>-->
+<!--        <hr>-->
+<!--        <div>-->
+<!--            <a class="books_text" href="/articles/5klass"><h3>5 класс</h3></a>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <a class="books_text" href="/articles/6klass"><h3>6 класс</h3></a>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <a class="books_text" href="/articles/7klass"><h3>7 класс</h3></a>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <a class="books_text" href="/articles/8klass"><h3>8 класс</h3></a>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <a class="books_text" href="/articles/9klass"><h3>9 класс</h3></a>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<div class="container comment_block">
+    <form class="form_block border border-2 rounded-3 shadow p-3 mb-5 bg-body rounded" method="POST">
+        {% if current_user.is_authenticated %}
+        <p>{{current_user.name}}, Вы можете написать нам</p>
+        {% else %}
+        <div class="col comment_text">
+            <label for="inputEmail3" class="form-label">Введите email</label>
+            <input name="email" placeholder="Email" type="email" class="form-control" id="inputEmail3">
+        </div>
+        {% endif %}
+        <p class="form-label">Мы ответим на почту</p>
+        <div class="form-floating comment_text">
+                <textarea name="text" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                          style="min-height: 100px"></textarea>
+            <label for="floatingTextarea2">Ваш вопрос или комментарий</label>
+        </div>
+        <p><input type="submit" class="btn btn-primary form-control" value="Отправить"/></p>
+    </form>
+</div>
+
+
+</body>
+
+
+{% endblock %}

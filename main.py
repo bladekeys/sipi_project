@@ -533,6 +533,11 @@ def confirm_email(token):
         return redirect('/')
 
 
+@app.route('/help', methods=['GET', 'POST'])
+def help_page():
+    return render_template('help_page.html')
+
+
 @app.route('/logout')
 @login_required
 def logout():
