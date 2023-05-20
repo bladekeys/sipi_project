@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['load_5fuser_0',['load_user',['../namespacemodels.html#a10841bd47dfd55c0b45bd6dfa215132f',1,'models']]],
-  ['login_1',['login',['../namespacemain.html#a325d966924c7c2622fcc50c3626bc8ed',1,'main']]],
-  ['logout_2',['logout',['../namespacemain.html#a27e72161a2060436a23b0a8955b890e4',1,'main']]]
+  ['klass5_5f1_0',['klass5_1',['../namespacemain.html#a5e2b6df68f6d4ebb7ae7a797dac37cfb',1,'main']]],
+  ['klass5_5f2_1',['klass5_2',['../namespacemain.html#acd8191554df07d2c7fccc2e0bc28e23b',1,'main']]]
 ];
