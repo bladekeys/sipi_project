@@ -388,7 +388,7 @@ def books_klass(id):
 
 
 @app.route('/articles/<klass>/<theme>', methods=['GET', 'POST'])
-def articles_klass(klass):
+def articles_klass(klass, theme):
     if klass not in ['5klass', '6klass', '7klass', '8klass', '9klass', 'all']:
         abort(404)
     else:
@@ -413,7 +413,7 @@ def articles_klass(klass):
                     session.commit()
                 except Exception:
                     session.rollback()
-    return render_template('articles.html', id=klass)
+    return render_template('{}.html'.format(theme), id=klass)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -545,14 +545,14 @@ def logout():
     return redirect('/')
 
 
-@app.route('/5klass/1')
-def klass5_1():
-    return render_template('5klass_1.html')
-
-
-@app.route('/5klass/2')
-def klass5_2():
-    return render_template('5klass_2.html')
+# @app.route('/5klass/1')
+# def klass5_1():
+#     return render_template('5klass_1.html')
+#
+#
+# @app.route('/5klass/2')
+# def klass5_2():
+#     return render_template('5klass_2.html')
 
 
 @app.errorhandler(404)
