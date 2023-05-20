@@ -68,6 +68,8 @@ def make_session_permanent():
 
 @app.route('/', methods=['GET', 'POST'])
 def start_page():
+    """!Главная страница сайта
+    """
     if request.method == 'POST':
         if current_user.is_authenticated:
             email = current_user.email
@@ -96,6 +98,8 @@ def start_page():
 @app.route('/profile', methods=['GET', 'POST'])
 @login_required
 def profile():
+    """!Страница профиля пользователя
+    в качестве метода POST принимает фотографию"""
     if request.method == 'POST':
         current_user.set_photo(request.files['photo'])
 
@@ -350,6 +354,7 @@ def admin_test_template(klass, test_id):
 @app.route('/admin')
 @login_required
 def admin():
+    """!Админ панель"""
     if not current_user.get_role() == 'Admin':
         return redirect('/login')
     new_users = '?'
@@ -418,6 +423,7 @@ def articles_klass(klass, theme):
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    """!Авторизация пользователя"""
     if current_user.is_authenticated:
         return redirect('/')
     try:
@@ -439,6 +445,7 @@ def login():
 
 @app.route('/registration', methods=['GET', 'POST'])
 def registration():
+    """!Регистрация пользователя"""
     if request.method == 'POST':
         email = request.form['email']
         role = 'User'
@@ -520,6 +527,7 @@ def new_password(token_forget_password):
 
 @app.route('/confirm_email/<token>')
 def confirm_email(token):
+    """!"""
     try:
         email_token = tokens.decrypt(token, salt='email-confirm')
     except SignatureExpired:
@@ -535,12 +543,14 @@ def confirm_email(token):
 
 @app.route('/help', methods=['GET', 'POST'])
 def help_page():
+    """!Страница пользователя"""
     return render_template('help_page.html')
 
 
 @app.route('/logout')
 @login_required
 def logout():
+    """!Выход"""
     logout_user()
     return redirect('/')
 
