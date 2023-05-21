@@ -32,13 +32,6 @@
     .font-base{
     font-family: Avenir !important;
     }
-
-
-
-
-
-
-
     </style>
 
 </head>
@@ -58,17 +51,28 @@
 .show {
   display: block;
 }
-
 </style>
 <body>
 
 <div style="margin-top: 65px" class="container_books" id="myBtnContainer">
-    <a href="/books/all"><button class="btn btn-secondary" onclick="filterSelection('all')">Показать все</button></a>
-    <a href="/books/5klass"><button class="btn btn-secondary" onclick="filterSelection('5klass')"> 5 класс</button></a>
-    <a href="/books/6klass"><button class="btn btn-secondary" onclick="filterSelection('6klass')"> 6 класс</button></a>
-    <a href="/books/7klass"><button class="btn btn-secondary" onclick="filterSelection('7klass')"> 7 класс</button></a>
-    <a href="/books/8klass"><button class="btn btn-secondary" onclick="filterSelection('8klass')"> 8 класс</button></a>
-    <a href="/books/9klass"><button class="btn btn-secondary" onclick="filterSelection('9klass')"> 9 класс</button></a>
+    <a href="/books/all">
+        <button class="btn btn-secondary" onclick="filterSelection('all')">Показать все</button>
+    </a>
+    <a href="/books/5klass">
+        <button class="btn btn-secondary" onclick="filterSelection('5klass')"> 5 класс</button>
+    </a>
+    <a href="/books/6klass">
+        <button class="btn btn-secondary" onclick="filterSelection('6klass')"> 6 класс</button>
+    </a>
+    <a href="/books/7klass">
+        <button class="btn btn-secondary" onclick="filterSelection('7klass')"> 7 класс</button>
+    </a>
+    <a href="/books/8klass">
+        <button class="btn btn-secondary" onclick="filterSelection('8klass')"> 8 класс</button>
+    </a>
+    <a href="/books/9klass">
+        <button class="btn btn-secondary" onclick="filterSelection('9klass')"> 9 класс</button>
+    </a>
 </div>
 
 <div class="container">
@@ -107,29 +111,6 @@
     <div class="filterDiv 8klass books_box_form border border-1 shadow p-3 bg-body rounded">.</div>
     <div class="filterDiv 9klass books_box_form border border-1 shadow p-3 bg-body rounded">.</div>
     <div class="filterDiv 9klass books_box_form border border-1 shadow p-3 bg-body rounded">.</div>
-</div>
-
-<div class="comment_block">
-    <form class="form_block border border-2 rounded-3 shadow p-3 mb-5 bg-body rounded" method="POST">
-        {% if current_user.is_authenticated %}
-        <p>{{current_user.name}}, Вы можете написать нам</p>
-        {% else %}
-        <div class="col comment_text">
-            <label for="inputEmail3" class="form-label">Введите email</label>
-            <input name="email" placeholder="Email" type="email" class="form-control" id="inputEmail3">
-        </div>
-        {% endif %}
-        <p class="form-label">Мы ответим на почту</p>
-        <div class="form-floating comment_text">
-                <textarea name="text" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                          style="min-height: 100px"></textarea>
-            <label for="floatingTextarea2">Ваш вопрос или комментарий</label>
-        </div>
-        {% for cat, msg in get_flashed_messages(True) %}
-        <div class="flash {{cat}} comment_text">{{msg}}</div>
-        {% endfor %}
-        <p><input type="submit" class="btn btn-primary form-control" value="Отправить"/></p>
-    </form>
 </div>
 
 <script>
@@ -175,7 +156,6 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-
 
 </script>
 

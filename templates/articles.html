@@ -33,41 +33,119 @@
     font-family: Avenir !important;
     }
 
-
-
     </style>
 
 </head>
+<style>
+.filterDiv {
+  float: left;
+  background: rgba(0,0,0,0.5);
+<!--  color: #ffffff;-->
+<!--  width: 100px;-->
+<!--  line-height: 100px;-->
+  text-align: center;
+  margin: 2px;
+  display: none;
+}
 
+.show {
+  display: block;
+}
+</style>
 <body>
 <div style="text-align: center; margin-top: 100px;">
     <img class="text-align: center;" src="{{ url_for('static', filename='monkey.gif') }}" alt="404">
-    <h1 style="color: black;">Тут будут статьи и поддержка пагинации (мбмб) {{id}}</h1>
+    <h1 style="color: black;">Тут будут статьи {{id}}</h1>
 </div>
 
-<div class="comment_block">
-    <form class="form_block border border-2 rounded-3 shadow p-3 mb-5 bg-body rounded" method="POST">
-        {% if current_user.is_authenticated %}
-        <p>{{current_user.name}}, Вы можете написать нам</p>
-        {% else %}
-        <div class="col comment_text">
-            <label for="inputEmail3" class="form-label">Введите email</label>
-            <input name="email" placeholder="Email" type="email" class="form-control" id="inputEmail3">
-        </div>
-        {% endif %}
-        <p class="form-label">Мы ответим на почту</p>
-        <div class="form-floating comment_text">
-                <textarea name="text" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                          style="min-height: 100px"></textarea>
-            <label for="floatingTextarea2">Ваш вопрос или комментарий</label>
-        </div>
-        {% for cat, msg in get_flashed_messages(True) %}
-        <div class="flash {{cat}} comment_text">{{msg}}</div>
-        {% endfor %}
-        <p><input type="submit" class="btn btn-primary form-control" value="Отправить"/></p>
-    </form>
+<div style="margin-top: 65px" class="container_books" id="myBtnContainer">
+    <a href="/articles/all">
+        <button class="btn btn-secondary" onclick="filterSelection('all')">Показать все</button>
+    </a>
+    <a href="/articles/5klass">
+        <button class="btn btn-secondary" onclick="filterSelection('5klass')"> 5 класс</button>
+    </a>
+    <a href="/articles/6klass">
+        <button class="btn btn-secondary" onclick="filterSelection('6klass')"> 6 класс</button>
+    </a>
+    <a href="/articles/7klass">
+        <button class="btn btn-secondary" onclick="filterSelection('7klass')"> 7 класс</button>
+    </a>
+    <a href="/articles/8klass">
+        <button class="btn btn-secondary" onclick="filterSelection('8klass')"> 8 класс</button>
+    </a>
+    <a href="/articles/9klass">
+        <button class="btn btn-secondary" onclick="filterSelection('9klass')"> 9 класс</button>
+    </a>
+</div>
+<div class="container">
+    <div class="filterDiv 5klass border border-1 shadow p-3 bg-body rounded">
+        <a href="/articles/5klass/natural"><p>Натуральные числа</p></a>
+    </div>
+    <div class="filterDiv 5klass border border-1 shadow p-3 bg-body rounded">
+        <p>
+            Десятичная запись чисел
+        </p>
+    </div>
+    <div class="filterDiv 6klass border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 6klass border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 6klass border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 6klass border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 7klass border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 7klass border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 7klass border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 8klass border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 8klass border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 9klass border border-1 shadow p-3 bg-body rounded">.</div>
+    <div class="filterDiv 9klass border border-1 shadow p-3 bg-body rounded">.</div>
 </div>
 
+<script>
+filterSelection("{{id}}");
+
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+</script>
 
 </body>
 

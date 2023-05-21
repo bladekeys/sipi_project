@@ -60,6 +60,36 @@ login.login_message_category = 'success'
 login.session_protection = 'strong'
 
 
+def post_coment(func):
+    def wrapper(*args, **kwargs):
+        return_value = func(*args, **kwargs)
+        if request.method == 'POST':
+            if current_user.is_authenticated:
+                email = current_user.email
+            else:
+                email = request.form['email']
+
+            text = request.form['text']
+            if email == '':
+                flash('Напишите почту.',
+                      category='error')
+            elif text == '':
+                flash('Напишите вопрос или комментарий.',
+                      category='error')
+            else:
+                coment = Coments(DT=datetime.now().strftime("%Y-%m-%d %H:%M:%S"), email=email, coment=str(text))
+                try:
+                    mail.on_comment(email, text)
+                    session.add(coment)
+                    session.commit()
+                except Exception:
+                    session.rollback()
+        return return_value
+
+    wrapper.__name__ = func.__name__
+    return wrapper
+
+
 @app.before_request
 def make_session_permanent():
     session.permanent = True
@@ -67,31 +97,10 @@ def make_session_permanent():
 
 
 @app.route('/', methods=['GET', 'POST'])
+@post_coment
 def start_page():
     """!Главная страница сайта
     """
-    if request.method == 'POST':
-        if current_user.is_authenticated:
-            email = current_user.email
-        else:
-            email = request.form['email']
-
-        text = request.form['text']
-        if email == '':
-            flash('Напишите почту.',
-                  category='error')
-        elif text == '':
-            flash('Напишите вопрос или комментарий.',
-                  category='error')
-        else:
-            coment = Coments(DT=datetime.now().strftime("%Y-%m-%d %H:%M:%S"), email=email, coment=str(text))
-            try:
-                mail.on_comment(email, text)
-                session.add(coment)
-                session.commit()
-            except Exception:
-                session.rollback()
-
     return render_template('index.html')
 
 
@@ -161,31 +170,10 @@ def reply(email, id):
 
 @app.route('/tests/<klass>', methods=['GET', 'POST'])
 @login_required
+@post_coment
 def tests(klass):
     if klass not in ['5klass', '6klass', '7klass', '8klass', '9klass', 'all']:
         abort(404)
-    else:
-        if request.method == 'POST':
-            if current_user.is_authenticated:
-                email = current_user.email
-            else:
-                email = request.form['email']
-
-            text = request.form['text']
-            if email == '':
-                flash('Напишите почту.',
-                      category='error')
-            elif text == '':
-                flash('Напишите вопрос или комментарий.',
-                      category='error')
-            else:
-                coment = Coments(DT=datetime.now().strftime("%Y-%m-%d %H:%M:%S"), email=email, coment=str(text))
-                try:
-                    mail.on_comment(email, text)
-                    session.add(coment)
-                    session.commit()
-                except Exception:
-                    session.rollback()
     return render_template('tests.html', id=klass)
 
 
@@ -364,61 +352,27 @@ def admin():
 
 
 @app.route('/books/<id>', methods=['GET', 'POST'])
+@post_coment
 def books_klass(id):
     if id not in ['5klass', '6klass', '7klass', '8klass', '9klass', 'all']:
         abort(404)
-    else:
-        if request.method == 'POST':
-            if current_user.is_authenticated:
-                email = current_user.email
-            else:
-                email = request.form['email']
-
-            text = request.form['text']
-            if email == '':
-                flash('Напишите почту.',
-                      category='error')
-            elif text == '':
-                flash('Напишите вопрос или комментарий.',
-                      category='error')
-            else:
-                coment = Coments(DT=datetime.now().strftime("%Y-%m-%d %H:%M:%S"), email=email, coment=str(text))
-                try:
-                    mail.on_comment(email, text)
-                    session.add(coment)
-                    session.commit()
-                except Exception:
-                    session.rollback()
     return render_template('books.html', id=id)
 
 
 @app.route('/articles/<klass>/<theme>', methods=['GET', 'POST'])
-def articles_klass(klass, theme):
+@post_coment
+def article_klass(klass, theme):
+    if klass not in ['5klass', '6klass', '7klass', '8klass', '9klass']:
+        abort(404)
+    return render_template('{}_{}.html'.format(klass, theme))
+
+
+@app.route('/articles/<klass>', methods=['GET', 'POST'])
+@post_coment
+def all_articles_klass(klass):
     if klass not in ['5klass', '6klass', '7klass', '8klass', '9klass', 'all']:
         abort(404)
-    else:
-        if request.method == 'POST':
-            if current_user.is_authenticated:
-                email = current_user.email
-            else:
-                email = request.form['email']
-
-            text = request.form['text']
-            if email == '':
-                flash('Напишите почту.',
-                      category='error')
-            elif text == '':
-                flash('Напишите вопрос или комментарий.',
-                      category='error')
-            else:
-                coment = Coments(DT=datetime.now().strftime("%Y-%m-%d %H:%M:%S"), email=email, coment=str(text))
-                try:
-                    mail.on_comment(email, text)
-                    session.add(coment)
-                    session.commit()
-                except Exception:
-                    session.rollback()
-    return render_template('{}.html'.format(theme), id=klass)
+    return render_template('articles.html', id=klass)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -527,7 +481,7 @@ def new_password(token_forget_password):
 
 @app.route('/confirm_email/<token>')
 def confirm_email(token):
-    """!"""
+    """! Подтверждение почты"""
     try:
         email_token = tokens.decrypt(token, salt='email-confirm')
     except SignatureExpired:
