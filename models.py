@@ -37,6 +37,26 @@ Session = sa.orm.sessionmaker(engine)
 session = Session()
 
 
+class Tests_table(Base):
+    """! Класс тестов пользователей"""
+    __tablename__ = sa.Table('Tests', metadata, autoload_with=engine)
+    id = sa.Column(sa.Integer, primary_key=True)
+    DT = sa.Column(sa.DateTime)
+    email = sa.Column(sa.String)
+    klass = sa.Column(sa.String)
+    test_name = sa.Column(sa.String)
+    value = sa.Column(sa.Integer)
+
+    def __init__(self, *, DT, email, klass, test_name, value):
+        """! Конструктор класса тестов"""
+        super().__init__()
+        self.DT = DT
+        self.email = email
+        self.klass = klass
+        self.test_name = test_name
+        self.value = value
+
+
 class Coments(Base):
     """! Класс комментариев для записи и выгрузки из БД"""
     __tablename__ = sa.Table('Coments', metadata, autoload_with=engine)

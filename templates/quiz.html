@@ -11,13 +11,15 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta charset="UTF-8">
     <meta name="HandheldFriendly" content="true"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 </head>
 <body>
 <div class="wrapper">
     <main class="main">
         <div class="quiz__head">
             <div id="name">Название</div>
-            <div class="head__content" id="head">!!!
+            <div class="head__content" id="head">
             </div>
         </div>
         <div class="quiz__body">
@@ -42,8 +44,10 @@
 </div>
 <script type="text/javascript">
             var questions_json = {{questions_json | tojson | safe}}
+
 </script>
-<script type="text/javascript" src="{{ url_for('static', filename= 'js/test.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename= 'js/test.js') }}">
+</script>
 
 </body>
 {% endblock %}

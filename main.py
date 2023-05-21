@@ -14,7 +14,7 @@ from sqlalchemy import create_engine
 from werkzeug.security import generate_password_hash
 
 from mail import Mail, tokens
-from models import Users, Coments, login, session
+from models import Users, Coments, Tests_table, login, session
 
 # load_dotenv(os.path.dirname(__file__)+".env")
 app = Flask(__name__)
@@ -189,6 +189,20 @@ def test_template(klass, test_id):
         with open("{}/static/tests_json/{}/{}.json".format(root_folder, klass, test_id), 'r',
                   encoding='UTF-8') as f_json:
             json_file = json.load(f_json)
+
+    if request.method == 'POST':
+        data = request.get_json()
+        value = data['value']
+        url = data['url'].split('/')
+        test = Tests_table(DT=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                     email=current_user.email, klass=url[3],
+                     test_name=url[4], value=value)
+        try:
+            session.add(test)
+            session.commit()
+        except Exception as e:
+            logging.error(e)
+            session.rollback()
 
     return render_template('quiz.html', questions_json=json_file)
 

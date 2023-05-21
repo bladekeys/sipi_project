@@ -218,6 +218,24 @@ for(var question of questions_from_json.data) {
 //	])
 //];
 
+function restart_function(){
+    var value = quiz.score;
+    $.ajax({
+                url: window.location.href,
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ 'value': value,
+                                        'url': window.location.href }),
+                success: function() {
+                    document.location.href = '/tests/all'
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+    };
+
+
 //Сам тест
 var quiz = new Quiz(1, questions, results);
 
@@ -260,6 +278,13 @@ function Update()
 		buttonsElem.innerHTML = "";
 		headElem.innerHTML = quiz.results[quiz.result].text;
 		pagesElem.innerHTML = "Очки: " + quiz.score;
+		var btn = document.createElement("button");
+		btn.className = "button";
+		btn.innerHTML = 'Завершить тест';
+		buttonsElem.appendChild(btn);
+		btn.onclick = function(){
+		    restart_function();
+		}
 	}
 }
 

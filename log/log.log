@@ -18371,3 +18371,1331 @@
 2023-05-21 14:10:40,475 werkzeug INFO 127.0.0.1 - - [21/May/2023 14:10:40] "GET /articles/6klass/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
 2023-05-21 14:10:40,502 werkzeug INFO 127.0.0.1 - - [21/May/2023 14:10:40] "GET /articles/6klass/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
 2023-05-21 14:10:40,687 werkzeug INFO 127.0.0.1 - - [21/May/2023 14:10:40] "[36mGET /articles/6klass/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-05-22 00:00:57,64 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 00:00:57,65 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 00:00:57,67 werkzeug INFO  * Restarting with stat
+2023-05-22 00:01:00,957 werkzeug WARNING  * Debugger is active!
+2023-05-22 00:01:00,967 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 00:01:36,485 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:01:36] "GET / HTTP/1.1" 200 -
+2023-05-22 00:01:36,628 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:01:36] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 00:01:36,644 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:01:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 00:01:36,696 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:01:36] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 00:01:36,702 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:01:36] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 00:01:36,714 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:01:36] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 00:01:36,717 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:01:36] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 00:01:58,202 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:01:58] "[32mGET /tests/all HTTP/1.1[0m" 302 -
+2023-05-22 00:01:58,241 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:01:58] "GET /login?next=%2Ftests%2Fall HTTP/1.1" 200 -
+2023-05-22 00:01:58,350 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:01:58] "GET /static/AvenirNextCyr-Bold.ttf HTTP/1.1" 200 -
+2023-05-22 00:01:58,354 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:01:58] "GET /static/AvenirNextCyr-Regular.ttf HTTP/1.1" 200 -
+2023-05-22 00:02:00,289 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:00] "[32mPOST /login?next=%2Ftests%2Fall HTTP/1.1[0m" 302 -
+2023-05-22 00:02:00,774 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:00] "GET / HTTP/1.1" 200 -
+2023-05-22 00:02:00,844 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:00] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 00:02:00,848 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 00:02:00,853 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:00] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 00:02:00,855 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:00] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 00:02:00,856 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:00] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 00:02:00,867 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:00] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 00:02:02,706 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:02] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 00:02:02,764 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:02] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 00:02:02,765 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 00:02:02,768 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:02] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 00:02:02,772 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:02] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 00:02:02,773 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:02] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 00:02:02,792 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:02] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 00:02:04,333 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:04] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 00:02:04,399 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:04] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 00:02:04,407 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 00:02:04,416 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:04] "GET /static/css/app.css HTTP/1.1" 200 -
+2023-05-22 00:02:04,420 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:04] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 00:02:04,421 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:02:04] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 00:08:34,150 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:08:34] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 00:08:34,215 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:08:34] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 00:08:34,216 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:08:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 00:08:34,232 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:08:34] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 00:08:34,234 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:08:34] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 00:08:34,258 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:08:34] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 00:08:55,48 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:08:55] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 00:08:55,108 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:08:55] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 00:08:55,112 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:08:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 00:08:55,117 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:08:55] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 00:08:55,118 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:08:55] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 00:08:55,148 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:08:55] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 00:09:35,11 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:09:35] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 00:09:35,61 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:09:35] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 00:09:35,61 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:09:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 00:09:35,74 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:09:35] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 00:09:35,75 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:09:35] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 00:09:35,98 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:09:35] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 00:09:52,6 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:09:52] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 00:09:52,55 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:09:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 00:09:52,56 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:09:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 00:09:52,80 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:09:52] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 00:09:52,81 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:09:52] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 00:09:52,92 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:09:52] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 00:12:32,897 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:12:32] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 00:12:32,970 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:12:32] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 00:12:32,976 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:12:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 00:12:33,6 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:12:33] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 00:12:33,8 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:12:33] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 00:12:33,18 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:12:33] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 00:21:18,537 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:21:18] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 00:21:18,611 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:21:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 00:21:18,615 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:21:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 00:21:18,618 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:21:18] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 00:21:18,619 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:21:18] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 00:21:18,634 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:21:18] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 00:25:49,759 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:25:49] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 00:25:49,812 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:25:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 00:25:49,814 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:25:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 00:25:49,821 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:25:49] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 00:25:49,821 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:25:49] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 00:25:49,844 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:25:49] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 00:26:24,417 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:26:24] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 00:26:24,466 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:26:24] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 00:26:24,466 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:26:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 00:26:24,495 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:26:24] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 00:26:24,496 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:26:24] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 00:26:24,503 werkzeug INFO 127.0.0.1 - - [22/May/2023 00:26:24] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:03:25,200 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 01:03:25,200 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 01:03:25,203 werkzeug INFO  * Restarting with stat
+2023-05-22 01:03:27,173 werkzeug WARNING  * Debugger is active!
+2023-05-22 01:03:27,185 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 01:05:52,964 werkzeug INFO  * Detected change in 'C:\\Users\\vladl\\PycharmProjects\\sipi_project\\main.py', reloading
+2023-05-22 01:05:53,78 werkzeug INFO  * Restarting with stat
+2023-05-22 01:05:55,795 werkzeug WARNING  * Debugger is active!
+2023-05-22 01:05:55,806 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 01:08:13,383 werkzeug INFO  * Detected change in 'C:\\Users\\vladl\\PycharmProjects\\sipi_project\\main.py', reloading
+2023-05-22 01:08:13,497 werkzeug INFO  * Restarting with stat
+2023-05-22 01:08:15,164 werkzeug WARNING  * Debugger is active!
+2023-05-22 01:08:15,174 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 01:13:47,408 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:47] "[32mGET /tests/5klass/sum HTTP/1.1[0m" 302 -
+2023-05-22 01:13:47,432 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:47] "GET /login?next=%2Ftests%2F5klass%2Fsum HTTP/1.1" 200 -
+2023-05-22 01:13:47,634 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:47] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 01:13:47,634 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:47] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 01:13:47,709 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-05-22 01:13:49,31 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:49] "[32mPOST /login?next=%2Ftests%2F5klass%2Fsum HTTP/1.1[0m" 302 -
+2023-05-22 01:13:49,109 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:49] "GET / HTTP/1.1" 200 -
+2023-05-22 01:13:49,197 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:13:49,208 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:13:49,222 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:49] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:13:49,225 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:49] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:13:49,252 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:49] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:13:49,282 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:49] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:13:51,801 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:51] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:13:51,862 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:13:51,868 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:13:51,871 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:51] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:13:51,874 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:51] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:13:51,875 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:51] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:13:51,887 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:51] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:13:52,908 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:52] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:13:52,964 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:13:52,969 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:13:52,972 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:52] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:13:52,978 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:52] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:13:52,987 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:13:52] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:14:00,632 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:14:00] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:14:00,637 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:14:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:14:00,638 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:14:00] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:15:29,51 werkzeug INFO  * Detected change in 'C:\\Users\\vladl\\PycharmProjects\\sipi_project\\main.py', reloading
+2023-05-22 01:15:29,147 werkzeug INFO  * Restarting with stat
+2023-05-22 01:17:54,490 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 01:17:54,490 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 01:17:54,492 werkzeug INFO  * Restarting with stat
+2023-05-22 01:17:56,6 werkzeug WARNING  * Debugger is active!
+2023-05-22 01:17:56,14 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 01:18:00,857 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:00] "[32mGET /tests/5klass/sum HTTP/1.1[0m" 302 -
+2023-05-22 01:18:00,897 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:00] "GET /login?next=%2Ftests%2F5klass%2Fsum HTTP/1.1" 200 -
+2023-05-22 01:18:01,1 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:01] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 01:18:01,56 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:01] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 01:18:02,360 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:02] "[32mPOST /login?next=%2Ftests%2F5klass%2Fsum HTTP/1.1[0m" 302 -
+2023-05-22 01:18:02,451 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:02] "GET / HTTP/1.1" 200 -
+2023-05-22 01:18:02,527 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:02] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:18:02,529 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:18:02,539 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:02] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:18:02,541 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:02] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:18:02,543 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:02] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:18:02,556 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:02] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:18:04,114 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:04] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:18:04,179 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:04] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:18:04,181 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:18:04,211 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:04] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:18:04,215 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:04] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:18:04,219 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:04] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:18:04,260 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:04] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:18:05,628 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:05] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:18:05,715 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:18:05,718 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:18:05,723 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:05] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:18:05,724 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:05] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:18:05,737 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:05] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:18:34,278 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:34] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:18:34,339 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:34] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:18:34,340 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:18:34,385 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:34] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:18:34,386 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:34] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:18:34,423 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:18:34] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:21:03,704 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:21:03] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:21:03,762 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:21:03] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:21:03,763 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:21:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:21:03,804 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:21:03] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:21:03,805 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:21:03] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:21:03,836 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:21:03] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:21:34,827 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:21:34] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:21:34,882 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:21:34] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:21:34,883 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:21:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:21:34,939 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:21:34] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:21:34,942 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:21:34] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:21:34,986 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:21:34] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:23:09,415 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:23:09] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:23:09,467 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:23:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:23:09,469 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:23:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:23:09,516 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:23:09] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:23:09,517 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:23:09] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 01:23:09,539 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:23:09] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:24:32,873 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:24:32] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:24:32,930 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:24:32] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:24:32,933 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:24:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:24:32,980 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:24:32] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:24:32,981 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:24:32] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:24:33,30 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:24:33] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:24:39,487 root ERROR 2
+2023-05-22 01:24:39,488 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:24:39] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:24:39,916 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:24:39] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:24:39,995 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:24:39] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:24:39,998 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:24:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:24:40,16 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:24:40] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:24:40,16 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:24:40] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:24:40,17 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:24:40] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:24:40,55 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:24:40] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:25:09,456 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:09] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:25:09,552 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:25:09,556 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:25:09,559 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:09] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:25:09,563 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:09] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 01:25:09,589 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:09] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:25:13,654 root ERROR 3
+2023-05-22 01:25:13,655 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:13] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:25:13,737 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:13] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:25:13,805 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:25:13,806 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:25:13,826 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:13] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:25:13,826 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:13] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:25:13,827 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:13] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:25:13,870 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:13] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:25:46,915 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:46] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:25:47,17 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:47] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:25:47,20 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:25:47,24 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:47] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:25:47,25 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:47] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:25:47,60 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:47] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:25:51,73 root ERROR 1
+2023-05-22 01:25:51,75 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:51] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:25:51,141 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:51] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:25:51,220 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:25:51,222 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:25:51,238 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:51] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:25:51,239 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:51] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:25:51,240 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:51] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:25:51,277 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:25:51] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:26:49,816 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:26:49] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:26:49,903 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:26:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:26:49,907 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:26:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:26:49,913 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:26:49] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:26:49,915 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:26:49] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 01:26:49,939 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:26:49] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:27:09,311 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:09] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:27:09,369 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:27:09,377 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:27:09,434 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:09] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:27:09,435 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:09] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:27:09,457 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:09] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:27:11,871 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:11] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:27:11,923 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:11] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:27:11,924 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:27:11,985 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:11] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:27:11,986 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:11] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 01:27:12,20 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:12] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:27:15,922 root ERROR 3
+2023-05-22 01:27:15,924 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:15] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:27:16,6 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:16] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:27:16,69 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:27:16,72 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:27:16,93 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:16] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:27:16,93 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:16] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:27:16,94 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:16] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:27:16,132 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:27:16] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:28:31,724 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:28:31] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:28:31,817 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:28:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:28:31,817 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:28:31] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:28:31,823 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:28:31] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:28:31,824 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:28:31] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:28:31,858 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:28:31] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:28:38,822 root ERROR 3
+2023-05-22 01:28:38,824 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:28:38] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:28:38,899 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:28:38] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:28:38,974 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:28:38] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:28:38,977 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:28:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:28:39,2 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:28:39] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:28:39,2 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:28:39] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:28:39,3 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:28:39] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:28:39,16 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:28:39] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:31:04,747 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:04] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:31:04,808 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:04] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:31:04,811 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:31:04,866 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:04] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:31:04,866 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:04] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:31:04,867 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:04] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:31:04,899 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:04] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:31:05,715 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:05] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:31:05,801 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:31:05,802 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:31:05,805 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:05] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:31:05,807 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:05] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:31:05,833 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:05] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:31:10,790 root ERROR 3
+2023-05-22 01:31:10,792 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:10] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:31:10,857 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:10] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:31:10,930 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:10] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:31:10,931 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:31:10,948 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:10] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:31:10,948 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:10] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:31:10,949 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:10] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:31:10,965 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:10] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:31:55,834 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:55] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:31:55,888 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:55] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:31:55,890 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:31:55,944 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:55] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:31:55,944 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:55] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:31:55,945 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:55] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:31:55,973 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:55] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:31:56,860 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:56] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:31:56,946 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:56] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:31:56,949 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:31:56,953 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:56] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:31:56,954 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:56] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:31:56,989 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:31:56] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:32:05,347 root ERROR 3
+2023-05-22 01:32:05,349 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:05] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:32:05,416 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:05] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:32:05,492 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:05,507 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:05,514 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:05] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:32:05,514 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:05] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:05,515 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:05] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:32:05,529 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:05] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:32:32,737 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:32] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:32:32,797 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:32] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:32,803 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:32,847 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:32] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:32:32,853 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:32] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:32,854 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:32] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:32:32,901 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:32] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:32:33,935 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:33] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:32:34,21 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:34] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:34,24 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:34,29 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:34] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:34,30 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:34] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:32:34,71 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:34] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:32:41,485 root ERROR 1
+2023-05-22 01:32:41,487 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:41] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:32:41,603 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:41] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:32:41,687 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:41] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:41,689 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:41,703 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:41] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:32:41,706 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:41] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:41,707 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:41] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:32:41,742 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:41] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:32:53,805 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:53] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:32:53,859 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:53] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:53,866 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:53,896 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:53] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:32:53,898 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:53] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:53,900 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:53] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:32:53,922 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:53] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:32:55,157 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:55] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:32:55,235 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:55] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:55,238 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:55,243 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:55] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:32:55,245 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:55] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:32:55,278 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:32:55] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:33:05,402 root ERROR 3
+2023-05-22 01:33:05,404 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:33:05] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:33:05,474 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:33:05] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:33:05,572 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:33:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:33:05,574 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:33:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:33:05,582 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:33:05] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:33:05,583 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:33:05] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:33:05,584 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:33:05] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:33:05,624 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:33:05] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:37:32,406 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:37:32] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:37:32,523 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:37:32] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:37:32,527 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:37:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:37:32,613 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:37:32] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:37:32,615 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:37:32] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:37:32,617 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:37:32] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:37:32,660 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:37:32] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:37:33,746 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:37:33] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:37:33,877 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:37:33] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:37:33,886 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:37:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:37:33,926 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:37:33] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:37:33,927 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:37:33] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:37:33,983 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:37:33] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:43:26,901 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:43:26] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:43:27,1 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:43:27] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:43:27,2 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:43:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:43:27,71 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:43:27] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:43:27,82 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:43:27] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:43:27,124 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:43:27] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:43:37,447 root ERROR 3
+2023-05-22 01:43:37,449 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:43:37] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:43:37,548 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:43:37] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:43:37,700 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:43:37] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:43:37,702 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:43:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:43:37,731 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:43:37] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:43:37,738 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:43:37] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:43:37,740 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:43:37] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:43:37,782 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:43:37] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:48:16,591 werkzeug INFO  * Detected change in 'C:\\Users\\vladl\\PycharmProjects\\sipi_project\\main.py', reloading
+2023-05-22 01:48:16,807 werkzeug INFO  * Restarting with stat
+2023-05-22 01:48:19,782 werkzeug WARNING  * Debugger is active!
+2023-05-22 01:48:19,806 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 01:52:50,392 werkzeug INFO  * Detected change in 'C:\\Users\\vladl\\PycharmProjects\\sipi_project\\models.py', reloading
+2023-05-22 01:52:50,557 werkzeug INFO  * Restarting with stat
+2023-05-22 01:52:53,235 werkzeug WARNING  * Debugger is active!
+2023-05-22 01:52:53,257 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 01:58:21,611 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 01:58:21,612 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 01:58:21,617 werkzeug INFO  * Restarting with stat
+2023-05-22 01:58:24,566 werkzeug WARNING  * Debugger is active!
+2023-05-22 01:58:24,580 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 01:58:33,239 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:33] "[32mGET /tests/all HTTP/1.1[0m" 302 -
+2023-05-22 01:58:33,320 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:33] "GET /login?next=%2Ftests%2Fall HTTP/1.1" 200 -
+2023-05-22 01:58:33,436 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:33] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 01:58:33,476 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:33] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 01:58:35,169 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:35] "[32mPOST /login?next=%2Ftests%2Fall HTTP/1.1[0m" 302 -
+2023-05-22 01:58:35,316 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:35] "GET / HTTP/1.1" 200 -
+2023-05-22 01:58:35,452 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:35] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:58:35,453 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:58:35,458 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:35] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:58:35,463 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:35] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:58:35,466 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:35] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:58:35,504 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:35] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:58:37,592 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:37] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 01:58:37,714 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:37] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:58:37,719 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:58:37,724 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:37] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:58:37,731 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:37] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:58:37,733 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:37] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:58:37,772 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:37] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:58:39,566 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:39] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:58:39,675 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:39] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:58:39,685 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:58:39,686 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:39] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:58:39,687 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:39] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:58:39,705 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:39] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:58:58,597 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:58:58] "[35m[1mPOST /tests/5klass/sum HTTP/1.1[0m" 500 -
+2023-05-22 01:59:46,853 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:46] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 01:59:46,960 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:46] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:59:46,966 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:59:47,15 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:47] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 01:59:47,16 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:47] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 01:59:47,30 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:47] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 01:59:47,590 werkzeug INFO  * Detected change in 'C:\\Users\\vladl\\PycharmProjects\\sipi_project\\main.py', reloading
+2023-05-22 01:59:47,742 werkzeug INFO  * Restarting with stat
+2023-05-22 01:59:50,886 werkzeug WARNING  * Debugger is active!
+2023-05-22 01:59:50,908 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 01:59:54,126 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:54] "[32mPOST /tests/5klass/sum HTTP/1.1[0m" 302 -
+2023-05-22 01:59:54,154 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:54] "GET /login?next=%2Ftests%2F5klass%2Fsum HTTP/1.1" 200 -
+2023-05-22 01:59:54,193 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:54] "[32mGET /tests/all HTTP/1.1[0m" 302 -
+2023-05-22 01:59:54,267 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:54] "GET /login?next=%2Ftests%2Fall HTTP/1.1" 200 -
+2023-05-22 01:59:54,359 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:54] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 01:59:54,392 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:54] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 01:59:57,113 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:57] "[32mPOST /login?next=%2Ftests%2Fall HTTP/1.1[0m" 302 -
+2023-05-22 01:59:57,240 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:57] "GET / HTTP/1.1" 200 -
+2023-05-22 01:59:57,353 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:57] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 01:59:57,363 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 01:59:57,367 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:57] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 01:59:57,368 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:57] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 01:59:57,370 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:57] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 01:59:57,378 werkzeug INFO 127.0.0.1 - - [22/May/2023 01:59:57] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:00:00,411 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:00:00] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:00:00,528 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:00:00] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:00:00,543 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:00:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:00:00,546 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:00:00] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:00:00,549 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:00:00] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:00:00,551 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:00:00] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:00:00,566 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:00:00] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:00:02,66 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:00:02] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:00:02,178 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:00:02] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:00:02,182 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:00:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:00:02,185 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:00:02] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:00:02,187 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:00:02] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:00:02,203 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:00:02] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:00:04,846 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:00:04] "[35m[1mPOST /tests/5klass/sum HTTP/1.1[0m" 500 -
+2023-05-22 02:01:07,735 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:01:07] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:01:07,813 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:01:07] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:01:07,815 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:01:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:01:07,837 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:01:07] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:01:07,838 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:01:07] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 02:01:07,854 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:01:07] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:01:12,547 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:01:12] "[35m[1mPOST /tests/5klass/sum HTTP/1.1[0m" 500 -
+2023-05-22 02:01:16,823 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:01:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:01:16,834 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:01:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:01:16,839 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:01:16] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:02:28,378 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:28] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:02:28,467 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:28] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:02:28,473 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:02:28,584 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:28] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:02:28,584 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:28] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:02:28,618 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:28] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:02:28,772 werkzeug INFO  * Detected change in 'C:\\Users\\vladl\\PycharmProjects\\sipi_project\\main.py', reloading
+2023-05-22 02:02:29,97 werkzeug INFO  * Restarting with stat
+2023-05-22 02:02:32,629 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:02:32,656 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:02:36,482 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 02:02:36,483 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 02:02:36,486 werkzeug INFO  * Restarting with stat
+2023-05-22 02:02:40,634 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:02:40,654 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:02:40,722 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:40] "[32mGET /tests/5klass/sum HTTP/1.1[0m" 302 -
+2023-05-22 02:02:40,861 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:40] "GET /login?next=%2Ftests%2F5klass%2Fsum HTTP/1.1" 200 -
+2023-05-22 02:02:41,19 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:41] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:02:41,63 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:41] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:02:43,39 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:43] "[32mPOST /login?next=%2Ftests%2F5klass%2Fsum HTTP/1.1[0m" 302 -
+2023-05-22 02:02:43,163 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:43] "GET / HTTP/1.1" 200 -
+2023-05-22 02:02:43,316 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:43] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:02:43,317 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:02:43,354 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:43] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:02:43,358 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:43] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:02:43,359 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:43] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:02:43,412 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:43] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:02:45,451 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:45] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:02:45,595 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:02:45,598 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:02:45,609 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:45] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:02:45,609 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:45] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:02:45,611 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:45] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:02:45,659 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:45] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:02:47,166 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:47] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:02:47,303 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:47] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:02:47,310 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:02:47,330 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:47] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:02:47,332 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:47] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:02:47,391 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:02:47] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:03:05,592 root WARNING ['http:', '', '127.0.0.1:5000', 'tests', '5klass', 'sum']
+2023-05-22 02:03:05,714 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:05] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:03:05,821 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:05] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:03:05,986 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:03:05,989 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:03:06,0 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:06] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:03:06,1 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:06] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:03:06,1 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:06] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:03:06,52 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:06] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:03:37,733 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 02:03:37,734 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 02:03:37,741 werkzeug INFO  * Restarting with stat
+2023-05-22 02:03:40,812 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:03:40,834 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:03:40,965 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:40] "GET / HTTP/1.1" 200 -
+2023-05-22 02:03:41,158 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:41] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:03:41,159 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:03:41,200 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:41] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:03:41,202 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:41] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:03:41,212 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:41] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:03:41,313 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:41] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:03:43,901 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:43] "[32mGET /tests/all HTTP/1.1[0m" 302 -
+2023-05-22 02:03:43,946 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:43] "GET /login?next=%2Ftests%2Fall HTTP/1.1" 200 -
+2023-05-22 02:03:44,198 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:44] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:03:44,200 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:44] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:03:45,752 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:45] "[32mPOST /login?next=%2Ftests%2Fall HTTP/1.1[0m" 302 -
+2023-05-22 02:03:45,856 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:45] "GET / HTTP/1.1" 200 -
+2023-05-22 02:03:45,985 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:03:45,986 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:03:46,11 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:46] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:03:46,11 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:46] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:03:46,13 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:46] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:03:46,49 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:46] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:03:48,84 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:48] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:03:48,267 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:48] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:03:48,273 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:03:48,278 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:48] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:03:48,284 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:48] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:03:48,285 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:48] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:03:48,311 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:48] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:03:49,587 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:49] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:03:49,769 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:03:49,771 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:03:49,785 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:49] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:03:49,786 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:49] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:03:49,817 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:03:49] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:04:01,129 root WARNING ['http:', '', '127.0.0.1:5000', 'tests', '5klass', 'sum']
+2023-05-22 02:04:01,237 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:04:01] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:04:01,326 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:04:01] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:04:01,517 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:04:01] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:04:01,519 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:04:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:04:01,549 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:04:01] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:04:01,549 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:04:01] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:04:01,551 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:04:01] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:04:01,623 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:04:01] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:06:25,663 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 02:06:25,663 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 02:06:25,667 werkzeug INFO  * Restarting with stat
+2023-05-22 02:06:28,704 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:06:28,719 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:06:31,387 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:31] "GET / HTTP/1.1" 200 -
+2023-05-22 02:06:31,582 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:31] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:06:31,589 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:06:31,611 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:31] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:06:31,611 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:31] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:06:31,613 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:31] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:06:31,670 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:31] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:06:33,819 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:33] "[32mGET /tests/all HTTP/1.1[0m" 302 -
+2023-05-22 02:06:33,857 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:33] "GET /login?next=%2Ftests%2Fall HTTP/1.1" 200 -
+2023-05-22 02:06:34,141 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:34] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:06:34,142 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:34] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:06:35,851 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:35] "[32mPOST /login?next=%2Ftests%2Fall HTTP/1.1[0m" 302 -
+2023-05-22 02:06:35,946 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:35] "GET / HTTP/1.1" 200 -
+2023-05-22 02:06:36,96 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:36] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:06:36,103 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:06:36,105 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:36] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:06:36,124 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:36] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:06:36,125 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:36] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:06:36,185 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:36] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:06:38,640 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:38] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:06:38,790 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:38] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:06:38,790 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:06:38,807 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:38] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:06:38,810 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:38] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:06:38,812 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:38] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:06:38,857 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:38] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:06:40,10 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:40] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:06:40,203 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:40] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:06:40,205 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:06:40,221 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:40] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:06:40,222 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:40] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:06:40,255 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:40] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:06:51,661 root ERROR (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'id', table 'MATH_WEB.dbo.Tests'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO [Tests] ([DT], email, klass, test_name, value) OUTPUT inserted.id VALUES (?, ?, ?, ?, ?)]
+[parameters: ('2023-05-22 02:06:51', 'vkremer.work@gmail.com', 'tests', '5klass', 4)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-05-22 02:06:51,765 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:51] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:06:51,973 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:51] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:06:52,129 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:06:52,131 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:06:52,161 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:52] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:06:52,164 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:52] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:06:52,167 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:52] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:06:52,229 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:06:52] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:08:46,684 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:08:46] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:08:46,875 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:08:46] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:08:46,881 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:08:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:08:46,907 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:08:46] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:08:46,908 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:08:46] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:08:46,961 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:08:46] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:08:57,552 root ERROR (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'id', table 'MATH_WEB.dbo.Tests'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO [Tests] ([DT], email, klass, test_name, value) OUTPUT inserted.id VALUES (?, ?, ?, ?, ?)]
+[parameters: ('2023-05-22 02:08:57', 'vkremer.work@gmail.com', 'tests', '5klass', 4)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-05-22 02:08:57,617 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:08:57] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:08:57,719 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:08:57] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:08:57,883 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:08:57] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:08:57,887 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:08:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:08:57,897 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:08:57] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:08:57,901 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:08:57] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:08:57,903 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:08:57] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:08:57,966 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:08:57] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:09:30,440 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:30] "GET / HTTP/1.1" 200 -
+2023-05-22 02:09:30,589 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:30] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:09:30,593 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:09:30,628 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:30] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:09:30,634 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:30] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:09:30,637 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:30] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:09:30,704 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:30] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:09:33,296 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:33] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:09:33,450 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:33] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:09:33,454 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:09:33,481 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:33] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:09:33,481 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:33] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:09:33,483 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:33] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:09:33,520 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:33] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:09:34,518 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:34] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:09:34,639 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:34] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:09:34,645 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:09:34,677 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:34] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:09:34,678 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:34] "GET /static/js/test.js HTTP/1.1" 200 -
+2023-05-22 02:09:34,730 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:34] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:09:40,457 root ERROR (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'id', table 'MATH_WEB.dbo.Tests'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO [Tests] ([DT], email, klass, test_name, value) OUTPUT inserted.id VALUES (?, ?, ?, ?, ?)]
+[parameters: ('2023-05-22 02:09:40', 'vkremer.work@gmail.com', 'tests', '5klass', 3)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-05-22 02:09:40,517 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:40] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:09:40,610 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:40] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:09:40,756 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:40] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:09:40,761 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:09:40,793 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:40] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:09:40,793 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:40] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:09:40,794 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:40] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:09:40,851 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:09:40] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:11:44,274 werkzeug INFO  * Detected change in 'C:\\Users\\vladl\\PycharmProjects\\sipi_project\\models.py', reloading
+2023-05-22 02:11:44,495 werkzeug INFO  * Restarting with stat
+2023-05-22 02:11:47,262 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:11:47,286 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:11:52,67 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 02:11:52,67 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 02:11:52,73 werkzeug INFO  * Restarting with stat
+2023-05-22 02:11:55,112 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:11:55,133 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:11:55,241 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:11:55] "[32mGET /tests/5klass/sum HTTP/1.1[0m" 302 -
+2023-05-22 02:11:55,322 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:11:55] "GET /login?next=%2Ftests%2F5klass%2Fsum HTTP/1.1" 200 -
+2023-05-22 02:11:55,442 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:11:55] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:11:55,492 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:11:55] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:11:57,724 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:11:57] "[32mPOST /login?next=%2Ftests%2F5klass%2Fsum HTTP/1.1[0m" 302 -
+2023-05-22 02:11:57,831 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:11:57] "GET / HTTP/1.1" 200 -
+2023-05-22 02:11:57,988 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:11:57] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:11:57,992 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:11:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:11:58,9 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:11:58] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:11:58,12 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:11:58] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:11:58,14 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:11:58] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:11:58,59 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:11:58] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:12:02,491 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:02] "GET /tests/5klass HTTP/1.1" 200 -
+2023-05-22 02:12:02,627 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:02] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:12:02,632 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:12:02,679 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:02] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:12:02,682 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:02] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:12:02,686 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:02] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:12:02,745 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:02] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:12:04,67 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:04] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:12:04,226 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:04] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:12:04,227 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:12:04,231 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:04] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:12:04,233 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:04] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:12:04,247 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:04] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:12:15,844 root ERROR (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'id', table 'MATH_WEB.dbo.Tests'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO [Tests] ([DT], email, klass, test_name, value) OUTPUT inserted.id VALUES (?, ?, ?, ?, ?)]
+[parameters: ('2023-05-22 02:12:15', 'vkremer.work@gmail.com', 'tests', '5klass', 3)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-05-22 02:12:15,943 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:15] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:12:16,100 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:16] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:12:16,223 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:12:16,226 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:12:16,271 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:16] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:12:16,271 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:16] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:12:16,272 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:16] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:12:16,315 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:12:16] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:16:45,612 werkzeug INFO  * Detected change in 'C:\\Users\\vladl\\PycharmProjects\\sipi_project\\models.py', reloading
+2023-05-22 02:16:45,754 werkzeug INFO  * Restarting with stat
+2023-05-22 02:16:48,609 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:16:48,622 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:17:28,684 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 02:17:28,685 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 02:17:28,688 werkzeug INFO  * Restarting with stat
+2023-05-22 02:17:32,61 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:17:32,76 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:17:50,170 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:50] "[32mGET /tests/all HTTP/1.1[0m" 302 -
+2023-05-22 02:17:50,258 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:50] "GET /login?next=%2Ftests%2Fall HTTP/1.1" 200 -
+2023-05-22 02:17:50,371 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:50] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:17:50,413 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:50] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:17:52,120 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:52] "[32mPOST /login?next=%2Ftests%2Fall HTTP/1.1[0m" 302 -
+2023-05-22 02:17:52,256 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:52] "GET / HTTP/1.1" 200 -
+2023-05-22 02:17:52,387 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:17:52,389 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:17:52,425 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:52] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:17:52,429 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:52] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:17:52,432 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:52] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:17:52,500 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:52] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:17:54,559 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:54] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:17:54,682 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:54] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:17:54,692 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:17:54,704 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:54] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:17:54,706 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:54] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:17:54,708 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:54] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:17:54,724 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:54] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:17:55,899 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:55] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:17:56,4 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:56] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:17:56,6 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:17:56,34 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:56] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:17:56,36 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:56] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:17:56,63 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:17:56] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:18:06,952 root ERROR (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'id', table 'MATH_WEB.dbo.Tests'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO [Tests] ([DT], email, klass, test_name, value) OUTPUT inserted.id VALUES (?, ?, ?, ?, ?)]
+[parameters: ('2023-05-22 02:18:06', 'vkremer.work@gmail.com', 'tests', '5klass', 4)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-05-22 02:18:07,8 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:18:07] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:18:07,409 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:18:07] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:18:07,544 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:18:07] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:18:07,546 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:18:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:18:07,594 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:18:07] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:18:07,594 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:18:07] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:18:07,597 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:18:07] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:18:07,622 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:18:07] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:19:44,184 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 02:19:44,185 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 02:19:44,192 werkzeug INFO  * Restarting with stat
+2023-05-22 02:19:47,369 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:19:47,392 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:19:57,993 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:19:57] "[32mGET /tests/5klass/sum HTTP/1.1[0m" 302 -
+2023-05-22 02:19:58,62 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:19:58] "GET /login?next=%2Ftests%2F5klass%2Fsum HTTP/1.1" 200 -
+2023-05-22 02:19:58,271 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:19:58] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:19:58,320 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:19:58] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:20:00,37 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:00] "[32mPOST /login?next=%2Ftests%2F5klass%2Fsum HTTP/1.1[0m" 302 -
+2023-05-22 02:20:00,177 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:00] "GET / HTTP/1.1" 200 -
+2023-05-22 02:20:00,313 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:00] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:20:00,319 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:20:00,333 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:00] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:20:00,336 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:00] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:20:00,342 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:00] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:20:00,401 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:00] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:20:02,607 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:02] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:20:02,716 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:02] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:20:02,723 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:20:02,795 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:02] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:20:02,797 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:02] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:20:02,798 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:02] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:20:02,840 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:02] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:20:04,757 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:04] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:20:04,900 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:04] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:20:04,907 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:20:04,944 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:04] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:20:04,944 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:04] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:20:04,998 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:04] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:20:09,762 root ERROR (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'id', table 'MATH_WEB.dbo.Tests'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO [Tests] ([DT], email, klass, test_name, value) OUTPUT inserted.id VALUES (?, ?, ?, ?, ?)]
+[parameters: ('2023-05-22 02:20:09', 'vkremer.work@gmail.com', 'tests', '5klass', 3)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-05-22 02:20:09,819 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:09] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:20:09,910 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:09] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:20:10,58 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:10] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:20:10,60 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:20:10,85 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:10] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:20:10,85 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:10] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:20:10,87 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:10] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:20:10,134 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:20:10] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:21:56,471 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:21:56] "GET / HTTP/1.1" 200 -
+2023-05-22 02:21:56,640 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:21:56] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:21:56,643 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:21:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:21:56,657 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:21:56] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:21:56,668 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:21:56] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:21:56,677 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:21:56] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:21:56,768 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:21:56] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:21:57,97 werkzeug INFO  * Detected change in 'C:\\Users\\vladl\\PycharmProjects\\sipi_project\\models.py', reloading
+2023-05-22 02:21:57,423 werkzeug INFO  * Restarting with stat
+2023-05-22 02:22:00,412 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:22:00,431 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:22:00,533 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:00] "[32mGET /tests/all HTTP/1.1[0m" 302 -
+2023-05-22 02:22:00,606 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:00] "GET /login?next=%2Ftests%2Fall HTTP/1.1" 200 -
+2023-05-22 02:22:00,711 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:00] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:22:00,758 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:00] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:22:02,525 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:02] "[32mPOST /login?next=%2Ftests%2Fall HTTP/1.1[0m" 302 -
+2023-05-22 02:22:02,657 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:02] "GET / HTTP/1.1" 200 -
+2023-05-22 02:22:02,768 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:02] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:22:02,774 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:22:02,789 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:02] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:22:02,794 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:02] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:22:02,795 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:02] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:22:02,853 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:02] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:22:04,876 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:04] "GET /tests/5klass HTTP/1.1" 200 -
+2023-05-22 02:22:05,6 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:22:05,9 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:22:05,39 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:05] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:22:05,41 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:05] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:22:05,42 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:05] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:22:05,95 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:05] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:22:06,59 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:06] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:22:06,179 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:22:06,181 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:22:06,208 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:06] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:22:06,209 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:06] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:22:06,260 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:06] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:22:10,881 root ERROR (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'id', table 'MATH_WEB.dbo.Tests'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO [Tests] ([DT], email, klass, test_name, value) OUTPUT inserted.id VALUES (?, ?, ?, ?, ?)]
+[parameters: ('2023-05-22 02:22:10', 'vkremer.work@gmail.com', 'tests', '5klass', 3)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-05-22 02:22:10,947 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:10] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:22:11,42 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:11] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:22:11,166 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:11] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:22:11,168 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:22:11,202 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:11] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:22:11,203 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:11] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:22:11,205 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:11] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:22:11,258 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:22:11] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:25:37,81 werkzeug INFO  * Detected change in 'C:\\Users\\vladl\\PycharmProjects\\sipi_project\\main.py', reloading
+2023-05-22 02:25:37,265 werkzeug INFO  * Restarting with stat
+2023-05-22 02:25:40,956 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:25:40,976 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:26:39,955 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 02:26:39,956 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 02:26:39,961 werkzeug INFO  * Restarting with stat
+2023-05-22 02:26:43,187 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:26:43,208 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:26:43,329 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:43] "GET / HTTP/1.1" 200 -
+2023-05-22 02:26:43,476 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:43] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:26:43,477 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:26:43,505 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:43] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:26:43,509 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:43] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:26:43,517 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:43] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:26:43,582 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:43] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:26:45,956 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:45] "[32mGET /tests/all HTTP/1.1[0m" 302 -
+2023-05-22 02:26:45,999 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:45] "GET /login?next=%2Ftests%2Fall HTTP/1.1" 200 -
+2023-05-22 02:26:46,152 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:46] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:26:46,195 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:46] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:26:47,832 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:47] "[32mPOST /login?next=%2Ftests%2Fall HTTP/1.1[0m" 302 -
+2023-05-22 02:26:47,931 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:47] "GET / HTTP/1.1" 200 -
+2023-05-22 02:26:48,65 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:48] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:26:48,72 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:26:48,80 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:48] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:26:48,83 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:48] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:26:48,83 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:48] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:26:48,109 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:48] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:26:50,615 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:50] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:26:50,738 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:50] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:26:50,739 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:26:50,773 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:50] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:26:50,774 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:50] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:26:50,775 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:50] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:26:50,824 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:50] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:26:51,884 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:51] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:26:52,17 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:26:52,27 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:26:52,39 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:52] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:26:52,39 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:52] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:26:52,90 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:52] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:26:58,468 root ERROR (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'id', table 'MATH_WEB.dbo.Tests'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO [Tests] ([DT], email, klass, test_name, value) OUTPUT inserted.id VALUES (?, ?, ?, ?, ?)]
+[parameters: ('2023-05-22 02:26:58', 'vkremer.work@gmail.com', 'tests', '5klass', 1)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-05-22 02:26:58,523 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:58] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:26:58,626 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:58] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:26:58,730 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:58] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:26:58,732 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:26:58,774 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:58] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:26:58,777 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:58] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:26:58,779 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:58] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:26:58,823 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:26:58] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:30:05,426 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 02:30:05,427 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 02:30:05,430 werkzeug INFO  * Restarting with stat
+2023-05-22 02:30:08,868 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:30:08,883 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:30:58,479 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:30:58] "[32mGET /tests/all HTTP/1.1[0m" 302 -
+2023-05-22 02:30:58,557 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:30:58] "GET /login?next=%2Ftests%2Fall HTTP/1.1" 200 -
+2023-05-22 02:30:58,679 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:30:58] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:30:58,733 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:30:58] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:31:00,406 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:00] "[32mPOST /login?next=%2Ftests%2Fall HTTP/1.1[0m" 302 -
+2023-05-22 02:31:00,643 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:00] "GET / HTTP/1.1" 200 -
+2023-05-22 02:31:00,769 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:00] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:31:00,771 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:31:00,794 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:00] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:31:00,798 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:00] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:31:00,799 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:00] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:31:00,864 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:00] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:31:03,996 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:03] "GET /tests/5klass HTTP/1.1" 200 -
+2023-05-22 02:31:04,100 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:04] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:31:04,101 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:31:04,132 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:04] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:31:04,132 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:04] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:31:04,135 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:04] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:31:04,167 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:04] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:31:06,326 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:06] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:31:06,437 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:31:06,439 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:31:06,465 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:06] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:31:06,466 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:06] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:31:06,488 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:06] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:31:11,686 root ERROR (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'id', table 'MATH_WEB.dbo.Tests'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO [Tests] ([DT], email, klass, test_name, value) OUTPUT inserted.id VALUES (?, ?, ?, ?, ?)]
+[parameters: ('2023-05-22 02:31:11', 'vkremer.work@gmail.com', 'tests', '5klass', 2)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-05-22 02:31:11,754 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:11] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:31:11,871 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:11] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:31:11,981 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:11] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:31:11,982 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:31:12,13 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:12] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:31:12,13 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:12] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:31:12,15 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:12] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:31:12,68 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:31:12] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:38:18,598 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 02:38:18,599 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 02:38:18,604 werkzeug INFO  * Restarting with stat
+2023-05-22 02:38:22,171 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:38:22,193 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:39:05,338 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 02:39:05,338 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 02:39:05,341 werkzeug INFO  * Restarting with stat
+2023-05-22 02:39:07,854 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:39:07,878 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:39:10,172 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:10] "[32mGET /tests/all HTTP/1.1[0m" 302 -
+2023-05-22 02:39:10,290 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:10] "GET /login?next=%2Ftests%2Fall HTTP/1.1" 200 -
+2023-05-22 02:39:10,540 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:10] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:39:10,620 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:10] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:39:12,341 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:12] "[32mPOST /login?next=%2Ftests%2Fall HTTP/1.1[0m" 302 -
+2023-05-22 02:39:12,485 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:12] "GET / HTTP/1.1" 200 -
+2023-05-22 02:39:12,623 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:12] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:39:12,638 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:39:12,666 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:12] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:39:12,672 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:12] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:39:12,686 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:12] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:39:12,768 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:12] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:39:15,575 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:15] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:39:15,702 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:15] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:39:15,705 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:39:15,737 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:15] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:39:15,741 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:15] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:39:15,742 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:15] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:39:15,812 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:15] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:39:17,474 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:17] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:39:17,618 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:39:17,626 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:39:17,652 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:17] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:39:17,654 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:17] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:39:17,696 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:17] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:39:22,843 root ERROR (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'id', table 'MATH_WEB.dbo.Tests'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO [Tests] ([DT], email, klass, test_name, value) OUTPUT inserted.id VALUES (?, ?, ?, ?, ?)]
+[parameters: ('2023-05-22 02:39:22', 'vkremer.work@gmail.com', 'tests', '5klass', 4)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-05-22 02:39:22,912 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:22] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:39:23,4 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:23] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:39:23,138 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:23] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:39:23,141 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:39:23,163 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:23] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:39:23,167 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:23] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:39:23,168 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:23] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:39:23,193 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:39:23] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:40:29,874 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 02:40:29,875 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 02:40:29,880 werkzeug INFO  * Restarting with stat
+2023-05-22 02:40:33,108 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:40:33,131 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:40:33,281 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:33] "GET / HTTP/1.1" 200 -
+2023-05-22 02:40:33,428 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:33] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:40:33,430 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:40:33,464 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:33] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:40:33,469 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:33] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:40:33,470 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:33] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:40:33,521 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:33] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:40:36,791 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:36] "[32mGET /tests/all HTTP/1.1[0m" 302 -
+2023-05-22 02:40:36,858 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:36] "GET /login?next=%2Ftests%2Fall HTTP/1.1" 200 -
+2023-05-22 02:40:36,998 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:36] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:40:37,39 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:37] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:40:39,53 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:39] "[32mPOST /login?next=%2Ftests%2Fall HTTP/1.1[0m" 302 -
+2023-05-22 02:40:39,131 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:39] "GET / HTTP/1.1" 200 -
+2023-05-22 02:40:39,292 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:39] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:40:39,295 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:40:39,324 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:39] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:40:39,326 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:39] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:40:39,327 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:39] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:40:39,392 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:39] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:40:41,636 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:41] "GET /tests/5klass HTTP/1.1" 200 -
+2023-05-22 02:40:41,761 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:41] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:40:41,763 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:40:41,802 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:41] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:40:41,803 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:41] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:40:41,805 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:41] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:40:41,852 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:41] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:40:43,631 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:43] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:40:43,762 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:43] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:40:43,765 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:40:43,775 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:43] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:40:43,779 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:43] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:40:43,835 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:43] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:40:53,22 root ERROR (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'id', table 'MATH_WEB.dbo.Tests'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO [Tests] ([DT], email, klass, test_name, value) OUTPUT inserted.id VALUES (?, ?, ?, ?, ?)]
+[parameters: ('2023-05-22 02:40:52', 'vkremer.work@gmail.com', 'tests', '5klass', 5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-05-22 02:40:53,80 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:53] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:40:53,170 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:53] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:40:53,296 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:53] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:40:53,300 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:40:53,331 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:53] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:40:53,332 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:53] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:40:53,333 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:53] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:40:53,380 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:40:53] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:42:54,867 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 02:42:54,867 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 02:42:54,882 werkzeug INFO  * Restarting with stat
+2023-05-22 02:42:57,714 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:42:57,729 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:43:22,180 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:22] "[32mGET /tests/5klass/sum HTTP/1.1[0m" 302 -
+2023-05-22 02:43:22,242 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:22] "GET /login?next=%2Ftests%2F5klass%2Fsum HTTP/1.1" 200 -
+2023-05-22 02:43:22,415 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:22] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:43:22,475 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:22] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:43:22,964 werkzeug INFO  * Detected change in 'C:\\Users\\vladl\\PycharmProjects\\sipi_project\\main.py', reloading
+2023-05-22 02:43:23,154 werkzeug INFO  * Restarting with stat
+2023-05-22 02:43:26,495 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:43:26,517 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:43:27,125 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:27] "[32mPOST /login?next=%2Ftests%2F5klass%2Fsum HTTP/1.1[0m" 302 -
+2023-05-22 02:43:27,296 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:27] "GET / HTTP/1.1" 200 -
+2023-05-22 02:43:27,416 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:27] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:43:27,418 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:43:27,438 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:27] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:43:27,439 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:27] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:43:27,440 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:27] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:43:27,495 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:27] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:43:35,920 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:35] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:43:36,46 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:36] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:43:36,48 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:43:36,80 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:36] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:43:36,89 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:36] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:43:36,90 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:36] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:43:36,146 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:36] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:43:37,785 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:37] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:43:37,904 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:37] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:43:37,906 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:43:37,926 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:37] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:43:37,927 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:37] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:43:37,965 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:37] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:43:46,208 root ERROR (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'id', table 'MATH_WEB.dbo.Tests'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO [Tests] ([DT], email, klass, test_name, value) OUTPUT inserted.id VALUES (?, ?, ?, ?, ?)]
+[parameters: ('2023-05-22 02:43:46', 'vkremer.work@gmail.com', 'tests', '5klass', 5)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-05-22 02:43:46,327 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:46] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:43:46,429 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:46] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:43:46,579 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:46] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:43:46,581 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:43:46,591 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:46] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:43:46,593 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:46] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:43:46,594 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:46] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:43:46,647 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:43:46] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:46:22,259 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 02:46:22,260 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 02:46:22,263 werkzeug INFO  * Restarting with stat
+2023-05-22 02:46:26,283 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:46:26,306 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:47:07,268 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:07] "GET / HTTP/1.1" 200 -
+2023-05-22 02:47:07,491 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:07,493 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:07] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:07,531 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:07] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:47:07,533 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:07] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:07,534 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:07] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:47:07,616 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:07] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:47:11,626 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:11] "[32mGET /tests/all HTTP/1.1[0m" 302 -
+2023-05-22 02:47:11,703 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:11] "GET /login?next=%2Ftests%2Fall HTTP/1.1" 200 -
+2023-05-22 02:47:11,825 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:11] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:47:11,827 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:11] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:47:13,622 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:13] "[32mPOST /login?next=%2Ftests%2Fall HTTP/1.1[0m" 302 -
+2023-05-22 02:47:13,700 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:13] "GET / HTTP/1.1" 200 -
+2023-05-22 02:47:13,813 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:13,815 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:13,816 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:13] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:47:13,822 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:13] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:13,823 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:13] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:47:13,837 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:13] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:47:15,927 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:15] "GET /tests/5klass HTTP/1.1" 200 -
+2023-05-22 02:47:16,46 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:16,54 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:16,56 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:16] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:47:16,60 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:16] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:16,62 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:16] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:47:16,80 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:16] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:47:17,435 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:17] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:47:17,539 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:17,548 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:17] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:17,550 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:17,551 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:17] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:47:17,580 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:17] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:47:29,287 root ERROR (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'id', table 'MATH_WEB.dbo.Tests'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO [Tests] ([DT], email, klass, test_name, value) OUTPUT inserted.id VALUES (?, ?, ?, ?, ?)]
+[parameters: ('2023-05-22 02:47:29', 'vkremer.work@gmail.com', 'tests', '5klass', 3)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-05-22 02:47:29,343 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:29] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:47:29,433 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:29] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:47:29,546 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:29] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:29,557 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:29,558 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:29] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:47:29,558 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:29] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:29,560 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:29] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:47:29,584 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:29] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:47:31,312 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:31] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:47:31,416 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:31] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:31,422 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:31,426 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:31] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:31,428 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:31] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:47:31,454 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:31] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:47:33,447 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:33] "GET / HTTP/1.1" 200 -
+2023-05-22 02:47:33,567 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:33] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:33,575 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:33,577 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:33] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:47:33,583 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:33] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:33,585 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:33] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:47:33,602 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:33] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:47:55,750 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:55] "[32mGET /logout HTTP/1.1[0m" 302 -
+2023-05-22 02:47:55,797 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:55] "GET / HTTP/1.1" 200 -
+2023-05-22 02:47:55,867 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:55] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:55,869 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:55,912 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:55] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:47:55,914 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:55] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:47:55,916 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:55] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:47:55,969 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:55] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:47:59,68 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:59] "GET /login HTTP/1.1" 200 -
+2023-05-22 02:47:59,177 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:59] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:47:59,220 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:47:59] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:48:00,290 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:00] "GET /registration HTTP/1.1" 200 -
+2023-05-22 02:48:00,396 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:00] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:48:00,398 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:00] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:48:08,458 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:08] "[32mPOST /registration HTTP/1.1[0m" 302 -
+2023-05-22 02:48:08,520 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:08] "GET /login HTTP/1.1" 200 -
+2023-05-22 02:48:08,607 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:08] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:48:08,609 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:08] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:48:15,927 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:15] "[32mPOST /login HTTP/1.1[0m" 302 -
+2023-05-22 02:48:15,992 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:15] "GET / HTTP/1.1" 200 -
+2023-05-22 02:48:16,121 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:48:16,127 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:48:16,129 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:16] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:48:16,132 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:16] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:48:16,140 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:16] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:48:16,147 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:16] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:48:16,159 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:16] "GET /static/profile.png HTTP/1.1" 200 -
+2023-05-22 02:48:18,580 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:18] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:48:18,668 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:48:18,677 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:48:18,680 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:18] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:48:18,684 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:18] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:48:18,689 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:18] "[36mGET /static/profile.png HTTP/1.1[0m" 304 -
+2023-05-22 02:48:18,690 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:18] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:48:18,708 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:18] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:48:20,171 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:20] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:48:20,278 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:20] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:48:20,291 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:48:20,294 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:20] "[36mGET /static/profile.png HTTP/1.1[0m" 304 -
+2023-05-22 02:48:20,320 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:48:20] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:49:31,171 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:31] "[32mGET /confirm_email/InZsYWQubG9zNzAwQGdtYWlsLmNvbSI.Yr79l8ZgpGAZ9FQ0NxltC3pfMCE HTTP/1.1[0m" 302 -
+2023-05-22 02:49:31,256 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:31] "GET / HTTP/1.1" 200 -
+2023-05-22 02:49:31,445 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:31] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:49:31,445 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:49:31,534 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:31] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:49:31,548 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:31] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:49:31,550 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:31] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:49:31,552 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:31] "[36mGET /static/profile.png HTTP/1.1[0m" 304 -
+2023-05-22 02:49:31,585 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:31] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:49:33,998 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:33] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:49:34,126 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:34] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:49:34,131 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:49:34,136 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:34] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:49:34,142 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:34] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:49:34,149 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:34] "[36mGET /static/profile.png HTTP/1.1[0m" 304 -
+2023-05-22 02:49:34,150 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:34] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:49:34,158 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:34] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:49:35,122 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:35] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:49:35,240 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:35] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:49:35,245 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:49:35,249 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:35] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:49:35,252 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:35] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:49:35,255 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:35] "[36mGET /static/profile.png HTTP/1.1[0m" 304 -
+2023-05-22 02:49:35,307 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:35] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:49:43,696 root ERROR (pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'id', table 'MATH_WEB.dbo.Tests'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+[SQL: INSERT INTO [Tests] ([DT], email, klass, test_name, value) OUTPUT inserted.id VALUES (?, ?, ?, ?, ?)]
+[parameters: ('2023-05-22 02:49:43', 'vlad.los700@gmail.com', 'tests', '5klass', 3)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-05-22 02:49:43,720 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:43] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:49:43,792 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:43] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:49:43,912 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:43] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:49:43,936 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:49:43,940 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:43] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:49:43,945 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:43] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:49:43,953 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:43] "[36mGET /static/profile.png HTTP/1.1[0m" 304 -
+2023-05-22 02:49:43,956 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:43] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:49:43,959 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:49:43] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:54:05,860 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.4:5000
+2023-05-22 02:54:05,861 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-05-22 02:54:05,864 werkzeug INFO  * Restarting with stat
+2023-05-22 02:54:08,320 werkzeug WARNING  * Debugger is active!
+2023-05-22 02:54:08,345 werkzeug INFO  * Debugger PIN: 114-392-730
+2023-05-22 02:54:44,979 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:44] "GET / HTTP/1.1" 200 -
+2023-05-22 02:54:45,146 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:54:45,155 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:54:45,184 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:45] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:54:45,185 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:45] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:54:45,191 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:45] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:54:45,193 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:45] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:54:50,256 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:50] "[32mGET /tests/all HTTP/1.1[0m" 302 -
+2023-05-22 02:54:50,318 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:50] "GET /login?next=%2Ftests%2Fall HTTP/1.1" 200 -
+2023-05-22 02:54:50,429 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:50] "[36mGET /static/AvenirNextCyr-Bold.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:54:50,431 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:50] "[36mGET /static/AvenirNextCyr-Regular.ttf HTTP/1.1[0m" 304 -
+2023-05-22 02:54:52,107 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:52] "[32mPOST /login?next=%2Ftests%2Fall HTTP/1.1[0m" 302 -
+2023-05-22 02:54:52,154 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:52] "GET / HTTP/1.1" 200 -
+2023-05-22 02:54:52,269 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:54:52,277 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:54:52,281 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:52] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:54:52,283 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:52] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:54:52,288 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:52] "[36mGET /static/profile.png HTTP/1.1[0m" 304 -
+2023-05-22 02:54:52,290 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:52] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:54:52,298 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:52] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:54:53,879 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:53] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:54:54,1 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:54] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:54:54,7 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:54:54,16 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:54] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:54:54,20 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:54] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:54:54,20 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:54] "[36mGET /static/profile.png HTTP/1.1[0m" 304 -
+2023-05-22 02:54:54,24 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:54] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:54:54,38 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:54] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:54:56,234 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:56] "GET /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:54:56,336 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:56] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:54:56,352 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:54:56,353 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:56] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2023-05-22 02:54:56,357 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:56] "[36mGET /static/js/test.js HTTP/1.1[0m" 304 -
+2023-05-22 02:54:56,359 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:56] "[36mGET /static/profile.png HTTP/1.1[0m" 304 -
+2023-05-22 02:54:56,374 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:54:56] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-05-22 02:55:06,766 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:55:06] "POST /tests/5klass/sum HTTP/1.1" 200 -
+2023-05-22 02:55:06,842 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:55:06] "GET /tests/all HTTP/1.1" 200 -
+2023-05-22 02:55:06,938 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:55:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-05-22 02:55:06,952 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:55:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-05-22 02:55:06,955 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:55:06] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-05-22 02:55:06,958 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:55:06] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-05-22 02:55:06,962 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:55:06] "[36mGET /static/profile.png HTTP/1.1[0m" 304 -
+2023-05-22 02:55:06,964 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:55:06] "[36mGET /static/monkey.gif HTTP/1.1[0m" 304 -
+2023-05-22 02:55:06,985 werkzeug INFO 127.0.0.1 - - [22/May/2023 02:55:06] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
