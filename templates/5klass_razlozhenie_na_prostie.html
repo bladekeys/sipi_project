@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+
+{% extends 'base.html' %}
+
+{% block title %}
+Профиль
+{% endblock %}
+
+
+{% block body %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/ajax_date.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
+
+    <style>
+    @font-face {
+	font-family: Avenir;
+	src: url( "{{ url_for('static', filename='AvenirNextCyr-Regular.ttf') }}" );
+    }
+
+    .font-base{
+    font-family: Avenir !important;
+    }
+
+
+
+
+    </style>
+</head>
+
+<body>
+<div style="text-align: center; margin-top: 100px;">
+    <h1 class="">Натуральные числа</h1>
+</div>
+<div class="books_profile border border-2 rounded-3 shadow w-75 p-3 mb-3 bg-body rounded">
+    <p style="margin: 10px; font-size: 20px;">
+        Для украшения праздничного зала приобрели 45 гвоздик, из которых были сделаны одинаковые по числу цветов букеты.   Рассуждая о возможном числе букетов, получим, например, 9 букетов по 5 гвоздик в каждом, т. к. 45:9=5.  Если одно натуральное число нацело делится на другое натуральное число, то первое число называют кратным второму числу, а второе число называют делителем первого. Значит, число 45 является кратным числу 9, а число 9 является делителем числа 45. Рассуждая дальше: 8 букетов, например, не получится, т. к. 45 на 8 нацело не делится, значит, 8 не является делителем числа 45, или число 45 не является кратным числу 8. Делителем натурального числа a называют число, на которое a делится без остатка. Также определение делителя можно сформулировать так: пусть m и n — натуральные числа, тогда m — делитель числа n, если существует такое натуральное число k, что n=mk. Например, 5 — делитель числа 120, т. к. 120=524.   Число 15 имеет четыре делителя: 1, 3, 5, 15 — т. к. на каждое из них делится без остатка.    Число 1 является делителем любого натурального числа. Кратным числу a называют число, которое делится на a без остатка.
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+        Число 1 является делителем любого натурального числа. Кратным числу a называют число, которое делится на a без остатка.  Кратных чисел у каждого натурального числа бесконечное количество.   Натуральное число является кратным самому себе, причём наименьшим кратным
+    </p>
+</div>
+</body>
+
+
+{% endblock %}
