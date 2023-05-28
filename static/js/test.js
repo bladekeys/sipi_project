@@ -218,16 +218,30 @@ for(var question of questions_from_json.data) {
 //	])
 //];
 
-function restart_function(){
+function end_function(){
     var value = quiz.score;
     $.ajax({
                 url: window.location.href,
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ 'value': value,
-                                        'url': window.location.href }),
+                                        'url': window.location.href,
+                                        'name': questions_from_json.data[0].name}),
                 success: function() {
                     document.location.href = '/tests/all'
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+    };
+
+function restart_function(){
+    $.ajax({
+                url: window.location.href,
+                type: 'GET',
+                success: function() {
+                    document.location.href = window.location.href
                 },
                 error: function(error) {
                     console.log(error);
@@ -278,13 +292,24 @@ function Update()
 		buttonsElem.innerHTML = "";
 		headElem.innerHTML = quiz.results[quiz.result].text;
 		pagesElem.innerHTML = "Очки: " + quiz.score;
+
 		var btn = document.createElement("button");
 		btn.className = "button";
-		btn.innerHTML = 'Завершить тест';
-		buttonsElem.appendChild(btn);
+		btn.innerHTML = 'Переделать тест';
+		btn.setAttribute("index", 1);
 		btn.onclick = function(){
 		    restart_function();
 		}
+		buttonsElem.appendChild(btn);
+
+		var btn = document.createElement("button");
+		btn.className = "button";
+		btn.innerHTML = 'Завершить тест';
+		btn.setAttribute("index", 0);
+		btn.onclick = function(){
+		    end_function();
+		}
+		buttonsElem.appendChild(btn);
 	}
 }
 

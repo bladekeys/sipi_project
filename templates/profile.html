@@ -33,10 +33,41 @@
     font-family: Avenir !important;
     }
 
+    table {
+    font-family: Avenir;
+        border-collapse: collapse;
+        width: 100%;
+    }
 
+    td, th {
+        border: 1px solid #000000;
+        margin: 0 auto;
+    }
 
     </style>
 </head>
+<script>
+    var users_tests;
+
+
+    window.onload = () => {
+        users_tests = {{user_tests_list | tojson | safe}};
+        users_tests = JSON.parse(users_tests);
+        console.log(users_tests);
+        loadTableData(users_tests);
+    }
+
+    function loadTableData(personData) {
+        const tableBody = document.getElementById('tableData');
+        let dataHtml = '';
+
+        for(let test of users_tests) {
+            dataHtml += `<tr><td>${test.DT}</td><td>${test.name}</td><td>${test.value}</td></tr>`;
+        }
+
+        tableBody.innerHTML = dataHtml;
+    }
+</script>
 
 <body>
 <div style="text-align: center; margin-top: 100px;">
@@ -70,8 +101,8 @@
         </div>
         {% if current_user.get_role() == 'Admin' %}
         {% else %}
-        <div class="progress_profile">
-            <a href="/tests"><h2>Тесты</h2></a>
+        <div class="progress_profile border border-2 rounded-3 shadow p-3 mb-5 bg-body rounded">
+            <a style="color:black;" href="/tests/all"><h2>Тесты</h2></a>
             <p>Общий прогресс по тестам за 5 класс</p>
             <div class="progress">
                 <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
@@ -102,6 +133,21 @@
                      aria-valuemax="100"></div>
             </div>
             <br>
+        </div>
+        <div class="progress_profile border border-2 rounded-3 shadow p-3 mb-5 bg-body rounded">
+            <p>Таблица результатов по тестам</p>
+            <table>
+        <thead>
+        <tr>
+            <th>Время</th>
+            <th>Название теста</th>
+            <th>Результат</th>
+        </tr>
+        </thead>
+        <tbody id="tableData"></tbody>
+    </table>
+
+
         </div>
         {% endif %}
     </div>

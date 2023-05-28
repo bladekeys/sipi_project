@@ -82,7 +82,8 @@ def post_coment(func):
                     mail.on_comment(email, text)
                     session.add(coment)
                     session.commit()
-                except Exception:
+                except Exception as error:
+                    logging.error(error)
                     session.rollback()
         return return_value
 
@@ -112,7 +113,14 @@ def profile():
     if request.method == 'POST':
         current_user.set_photo(request.files['photo'])
 
-    return render_template('profile.html')
+    user_tests_list = []
+    user_tests = session.query(Tests_table).filter_by(email=current_user.email).all()
+    for test in user_tests:
+        user_tests_list.append({"DT": test.DT.strftime("%Y-%m-%d %H:%M:%S"),
+                               "name": test.test_name,
+                               "value": test.value})
+
+    return render_template('profile.html', user_tests_list=json.dumps(user_tests_list, ensure_ascii=False))
 
 
 @app.route('/admin/users', methods=['GET', 'POST'])
@@ -145,8 +153,8 @@ def coments():
                                      "email": com.email,
                                      "coment": com.coment,
                                      "is_replied": 'Да' if com.replied else 'Нет',
-                                     "reply": "<a href='/admin/reply/" + com.email + "/" + str(com.id) + "'>"
-                                                                                                         "Ответить</a>"})
+                                     "reply": "<a href='/admin/reply/" + com.email + "/"
+                                              + str(com.id) + "'>Ответить</a>"})
     return render_template('coments.html',
                            all_coments_list=json.dumps(all_coments_list, ensure_ascii=False))
 
@@ -194,14 +202,15 @@ def test_template(klass, test_id):
         data = request.get_json()
         value = data['value']
         url = data['url'].split('/')
+        name = data['name']
         test = Tests_table(DT=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                     email=current_user.email, klass=url[3],
-                     test_name=url[4], value=value)
+                           email=current_user.email, klass=url[4],
+                           test_name=name, value=value)
         try:
             session.add(test)
             session.commit()
-        except Exception as e:
-            logging.error(e)
+        except Exception as error:
+            logging.error(error)
             session.rollback()
 
     return render_template('quiz.html', questions_json=json_file)
@@ -317,7 +326,8 @@ def admin_test_template(klass, test_id):
             json_file["data"][2]['answers'][1]['is_correct'] = q3c2
             json_file["data"][2]['answers'][2]['is_correct'] = q3c3
             json_file["data"][2]['answers'][3]['is_correct'] = q3c4
-        except Exception as e:
+        except Exception as error:
+            logging.error(error)
             pass
 
         try:
@@ -330,7 +340,8 @@ def admin_test_template(klass, test_id):
             json_file["data"][3]['answers'][1]['is_correct'] = q4c2
             json_file["data"][3]['answers'][2]['is_correct'] = q4c3
             json_file["data"][3]['answers'][3]['is_correct'] = q4c4
-        except Exception as e:
+        except Exception as error:
+            logging.error(error)
             pass
 
         try:
@@ -343,7 +354,8 @@ def admin_test_template(klass, test_id):
             json_file["data"][4]['answers'][1]['is_correct'] = q5c2
             json_file["data"][4]['answers'][2]['is_correct'] = q5c3
             json_file["data"][4]['answers'][3]['is_correct'] = q5c4
-        except Exception:
+        except Exception as error:
+            logging.error(error)
             pass
 
         with open("{}/static/tests_json/{}/{}.json".format(root_folder, klass, test_id), 'w',
@@ -405,7 +417,8 @@ def login():
             elif user is not None and user.check_password(request.form['password']):
                 login_user(user)
                 return redirect('/')
-    except Exception:
+    except Exception as error:
+        logging.error(error)
         return redirect('/login')
 
     return render_template("login.html")
@@ -433,7 +446,8 @@ def registration():
             try:
                 session.add(user)
                 session.commit()
-            except Exception:
+            except Exception as error:
+                logging.error(error)
                 session.rollback()
             return redirect('/login')
 
@@ -457,12 +471,14 @@ def forget_password():
                 try:
                     session.add(user)
                     session.commit()
-                except Exception:
+                except Exception as error:
+                    logging.error(error)
                     session.rollback()
                     render_template('error.html', name=current_user.get_id())
                 return redirect('/login')
 
-    except Exception:
+    except Exception as error:
+        logging.error(error)
         return redirect('/login')
 
     return render_template("forget_password.html")
@@ -485,7 +501,8 @@ def new_password(token_forget_password):
                     session.query(Users).filter_by(email=email_forget).update(
                         {'password': generate_password_hash(password)})
                     session.commit()
-                except Exception:
+                except Exception as error:
+                    logging.error(error)
                     session.rollback()
                     flash('Что-то пошло не так', category='error')
                 return redirect('/login')
@@ -504,7 +521,8 @@ def confirm_email(token):
         try:
             session.query(Users).filter_by(email=email_token).update({'verified': True})
             session.commit()
-        except Exception:
+        except Exception as error:
+            logging.error(error)
             session.rollback()
         return redirect('/')
 
@@ -534,7 +552,8 @@ def logout():
 
 
 @app.errorhandler(404)
-def page_not_found(e):
+def page_not_found(error):
+    logging.error(error)
     return render_template('access denied.html'), 404
 
 
