@@ -30,7 +30,7 @@ with open("{}/psswrd.txt".format(root_folder), 'r') as f:
 
 warnings.filterwarnings("ignore")
 
-logging.basicConfig(filename='./log/log.log',
+logging.basicConfig(filename=root_folder+'/log/log.log',
                     filemode='a',
                     format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S',
