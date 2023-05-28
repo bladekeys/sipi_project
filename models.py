@@ -122,7 +122,7 @@ class Users(UserMixin, Base):
         return self.name
 
     def get_role(self):
-        return self.role
+        return str(self.role)
 
     def get_verified(self):
         return not self.verified

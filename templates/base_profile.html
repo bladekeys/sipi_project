@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+<head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+            crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ml-auto mr-auto">
+    <div class="container-fluid">
+        <a class="navbar-brand" style="max-width:100px; margin-top: -6px;" href="/">
+            <img src="{{url_for('static',filename='/logo.svg')}}" width="50%"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        5 класс
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="/articles/5klass/natural">Натуральные числа</a></li>
+                        <li><a class="dropdown-item" href="/articles/5klass/1">Разложение чисел на простые множители</a></li>
+                        <li><a class="dropdown-item" href="/articles/5klass/1">Обыкновенный дроби</a></li>
+                        <li><a class="dropdown-item" href="/articles/5klass/1">Геометрические фигуры</a></li>
+                        <li><a class="dropdown-item" href="/articles/5klass/1">Десятичные дроби</a></li>
+                        <li><a class="dropdown-item" href="/articles/5klass/1">Геометрические тела</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/tests/5klass">Тесты</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/books/5klass">Учебники</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarScrollingDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        6 класс
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="/articles/6klass/1">Отношения, пропорции, проценты</a></li>
+                        <li><a class="dropdown-item" href="/articles/6klass/2">Рациональные числа</a></li>
+                        <li><a class="dropdown-item" href="/articles/6klass/3">Преобразование буквенных выражений</a></li>
+                        <li><a class="dropdown-item" href="/articles/6klass/4">Геометрические фигуры и тела</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/tests/6klass">Тесты</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/books/6klass">Учебники</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarScrollingDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        7 класс
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="/articles/7klass/1">Математические модели</a></li>
+                        <li><a class="dropdown-item" href="/articles/7klass/2">Линейные функции</a></li>
+                        <li><a class="dropdown-item" href="/articles/7klass/3">Решение систем линейных уравнений с двумя переменными</a></li>
+                        <li><a class="dropdown-item" href="/articles/7klass/4">Свойства степеней с натуральным показателем</a></li>
+                        <li><a class="dropdown-item" href="/articles/7klass/5">Одночлены</a></li>
+                        <li><a class="dropdown-item" href="/articles/7klass/6">Многочлены</a></li>
+                        <li><a class="dropdown-item" href="/articles/7klass/7">Квадратичные функции</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/tests/7klass">Тесты</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/books/7klass">Учебники</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarScrollingDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        8 класс
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="/articles/8klass/1">Алгебраические дроби</a></li>
+                        <li><a class="dropdown-item" href="/articles/8klass/2">Действительные числа</a></li>
+                        <li><a class="dropdown-item" href="/articles/8klass/3">Модуль. Квадратный корень</a></li>
+                        <li><a class="dropdown-item" href="/articles/8klass/4">Парабола и гипербола</a></li>
+                        <li><a class="dropdown-item" href="/articles/8klass/5">Квадратные уравнения</a></li>
+                        <li><a class="dropdown-item" href="/articles/8klass/6">Неравенства</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/tests/8klass">Тесты</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/books/8klass">Учебники</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarScrollingDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        9 класс
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="/articles/9klass/1">Неравенства и системы неравеств</a></li>
+                        <li><a class="dropdown-item" href="/articles/9klass/2">Системы уравнений. Равносильные преобразования</a></li>
+                        <li><a class="dropdown-item" href="/articles/9klass/3">Числовые функции. Свойства числовых функций</a></li>
+                        <li><a class="dropdown-item" href="/articles/9klass/4">Числовые последовательности. Прогрессии</a></li>
+                        <li><a class="dropdown-item" href="/articles/9klass/5">Комбинаторика</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/tests/9klass">Тесты</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/books/9klass">Учебники</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/help" role="button"
+                       aria-expanded="false">
+                        Справка
+                    </a>
+                </li>
+
+            </ul>
+            <form class="d-flex mr-auto">
+                <input class="form-control" type="search" placeholder="Поиск по сайту" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Искать</button>
+            </form>
+
+            {% if current_user.is_authenticated %}
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="true">
+                        {{current_user.name}}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="/profile">Профиль</a></li>
+                        {% if current_user.get_role() == 'Admin' %}
+                        <li><a class="dropdown-item" href="/admin">Админ</a></li>
+                        {% else %}
+                        <li><a class="dropdown-item" href="/tests/all">Тесты</a></li>
+                        {% endif %}
+                        <li><a class="dropdown-item" href="/logout">Выход</a></li>
+                    </ul>
+                </li>
+            </ul>
+            {% if current_user.get_photo() == None %}
+            <a href="/profile"><img class="photo_small nav-item" src="{{ url_for('static', filename='profile.png') }}"></a>
+            {% else %}
+            <a href="/profile"><img class="photo_small nav-item" src="data:{{current_user.mimetype}};base64,{{current_user.get_photo()}} "></a>
+            {% endif %}
+            {% else %}
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Войти</a>
+                </li>
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</nav>
+
+{% block body %}{% endblock %}
+</html>
