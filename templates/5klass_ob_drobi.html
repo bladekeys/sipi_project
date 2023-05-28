@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+
+{% extends 'base.html' %}
+
+{% block title %}
+Профиль
+{% endblock %}
+
+
+{% block body %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/ajax_date.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
+
+    <style>
+    @font-face {
+	font-family: Avenir;
+	src: url( "{{ url_for('static', filename='AvenirNextCyr-Regular.ttf') }}" );
+    }
+
+    .font-base{
+    font-family: Avenir !important;
+    }
+
+
+
+
+    </style>
+</head>
+
+<body>
+<div style="text-align: center; margin-top: 100px;">
+    <h1 class="">Обыкновенные дроби</h1>
+</div>
+<div class="books_profile border border-2 rounded-3 shadow w-75 p-3 mb-3 bg-body rounded">
+    <p style="margin: 10px; font-size: 20px;">
+        Очищенный мандарин имеет 9 долек. Каждая долька составляет 1/9 мандарина.
+Машенька съела две дольки, или 2/9 мандарина.
+
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+        Запись вида 2/9  называют обыкновенной дробью.  Число 2, которое стоит над чертой дроби, называют числителем дроби, а число 9, которое находится под чертой дроби — знаменателем.
+
+Числитель дроби пишут над чертой, а знаменатель — под чертой.
+
+Знаменатель дроби 9 показывает, на сколько частей разделён мандарин, а числитель 2 показывает, сколько таких частей, или долек, съела Машенька.
+
+Знаменатель показывает, на сколько долей разделили, а числитель — сколько таких долей забрали.
+
+В случае, когда числитель равен знаменателю, дробь равна единице (целое). Если взять все девять долек мандарина, или девять девятых, то получим целый мандарин (один мандарин).
+9/9 = 1.
+    </p>
+</div>
+</body>
+
+
+{% endblock %}

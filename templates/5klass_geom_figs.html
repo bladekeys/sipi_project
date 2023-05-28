@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+
+{% extends 'base.html' %}
+
+{% block title %}
+Профиль
+{% endblock %}
+
+
+{% block body %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/ajax_date.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
+
+    <style>
+    @font-face {
+	font-family: Avenir;
+	src: url( "{{ url_for('static', filename='AvenirNextCyr-Regular.ttf') }}" );
+    }
+
+    .font-base{
+    font-family: Avenir !important;
+    }
+
+
+
+
+    </style>
+</head>
+
+<body>
+<div style="text-align: center; margin-top: 100px;">
+    <h1 class="">Геометрические фигуры</h1>
+</div>
+<div class="books_profile border border-2 rounded-3 shadow w-75 p-3 mb-3 bg-body rounded">
+    <p style="margin: 10px; font-size: 20px;">
+        Геометрическая фигура угол образуется из двух лучей с общей начальной точкой.
+Общая точка называется вершиной угла, а лучи — сторонами угла.
+Для названия угла часто используют три большие латинские буквы, название вершины угла пишется посередине.
+Иногда угол можно назвать только одной буквой, которая находится у вершины.
+Можно также познакомиться с греческим алфавитом и использовать маленькие буквы для названий углов.
+Чаще используют: α,β,γ,δ,ϵ,η,ϕ,ω — и другие.
+ Попытаемся представить точку как что-то бесконечно маленькое, а прямую — как что-то бесконечно простирающееся в обе стороны.
+
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+        Если угол образован дополнительными (или противоположными) лучами, то он называется развёрнутым.
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+        Так же как каждый отрезок имеет длину, которую можно измерить линейкой и выразить в единицах измерения, так и каждый угол имеет величину.
+За единицу измерения углов принимают градус, что является 1180 частью развёрнутого угла.
+Величина развёрнутого угла — 180°.
+Углы измеряют транспортиром.
+
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+        Особый угол, половина развёрнутого угла — прямой угол.
+Прямой угол обозначают маленьким квадратиком внутри угла.
+Величина прямого угла равна 90°.
+
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+        Углы, величина которых меньше 90°, называются острыми.
+Углы, величина которых больше 90°, называются тупыми.
+
+
+    </p>
+</div>
+</body>
+
+
+{% endblock %}
