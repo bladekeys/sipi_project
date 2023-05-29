@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+
+{% extends 'base.html' %}
+
+{% block title %}
+Профиль
+{% endblock %}
+
+
+{% block body %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/ajax_date.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
+
+    <style>
+    @font-face {
+	font-family: Avenir;
+	src: url( "{{ url_for('static', filename='AvenirNextCyr-Regular.ttf') }}" );
+    }
+
+    .font-base{
+    font-family: Avenir !important;
+    }
+
+
+
+
+    </style>
+</head>
+
+<body>
+<div style="text-align: center; margin-top: 100px;">
+    <h1 class="">Десятичные дроби</h1>
+</div>
+<div class="books_profile border border-2 rounded-3 shadow w-75 p-3 mb-3 bg-body rounded">
+    <p style="margin: 10px; font-size: 20px;">
+        Часто мы встречаемся с дробями со знаменателями 10, 100, 1000 и т. д.
+Например, 1 г = 1/1000 кг, 1 мм = 1/10 см, 4 см 3 мм = 4 3/10  см и т. д.
+Числа со знаменателями 10, 100, 1000 и т. д. договорились записывать без знаменателя.
+
+
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+        Для этого знаменатель дроби не пишут, а целую часть и числитель записывают через запятую.
+ Например, число 4 3/10   записывают 4,3 и говорят: «4 целых и 3 десятых».
+Число 5 19/100 записывают 5,19 и говорят: «5 целых и 19 сотых».
+
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+        Если знаменатель дроби имеет вид единицы с нулём (или несколькими нулями), то эту дробь можно записать в виде десятичной дроби.
+Для перевода обыкновенной правильной дроби в десятичную дробь сначала пишут 0, потом ставят запятую и после неё записывают числитель.
+Например, число 21/100 записывают 0,21 и говорят: «0 целых и 21 сотая».
+
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+        Обрати внимание!
+
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+        Сколько нулей в знаменателе, столько цифр после запятой у десятичной дроби.
+Например, число 1 3/100 записывают 1,03 и говорят: «1 целая и 3 сотых».
+
+    </p>
+</div>
+</body>
+
+
+{% endblock %}
