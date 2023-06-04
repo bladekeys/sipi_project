@@ -49,7 +49,7 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=14)
 # app.config['SESSION_COOKIE_SECURE'] = True
 # app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
-app.config['USE_X_SENDFILE'] = True
+# app.config['USE_X_SENDFILE'] = True
 
 mydb = create_engine(app.config['SQLALCHEMY_DATABASE_URI'])
 
