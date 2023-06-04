@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+
+{% extends 'base.html' %}
+
+{% block title %}
+Профиль
+{% endblock %}
+
+
+{% block body %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/ajax_date.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
+
+    <style>
+    @font-face {
+	font-family: Avenir;
+	src: url( "{{ url_for('static', filename='AvenirNextCyr-Regular.ttf') }}" );
+    }
+
+    .font-base{
+    font-family: Avenir !important;
+    }
+
+
+
+
+    </style>
+</head>
+
+<body>
+<div style="text-align: center; margin-top: 100px;">
+    <h1 class="">Отношения, пропорции, проценты</h1>
+</div>
+<div class="books_profile border border-2 rounded-3 shadow w-75 p-3 mb-3 bg-body rounded">
+    <h2 class="">Отношение двух чисел</h2>
+    <p style="margin: 10px; font-size: 20px;">
+Отношением двух чисел называют их частное.
+Например, отношение числа a  к числу b  записывают так: a:b, или a/b.
+При делении одного числа на другое мы находим, во сколько раз одно число больше другого или, наоборот, какую часть одно число составляет от другого. В этом и есть смысл отношения двух чисел.
+Поскольку 5/2 = 10/4 = 50/20 = 2,5/1, то отношение 5:2 можно заменить и отношением 10:4, и отношением 50:20, и отношением 2,5:1.
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+            </p>
+    <p style="margin: 10px; font-size: 20px;">
+
+Отношение не изменится, если члены его умножить или разделить на одно и то же отличное от нуля число.
+Отношения 5 к 2 и 2 к 5, как и дроби 5/2 и 2/5, называют взаимно обратными.
+Для нахождения отношения длин, отношения масс надо выразить их в одной  единице измерения.
+Например, найдём отношение 30 см к 2 м. Сначала выразим обе эти величины в сантиметрах, а потом разделим одну на другую:
+2 м = 200 см,  поэтому 30:200 = 3/20.
+Для выражения этого отношения в процентах надо полученную дробь умножить на 100.
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+Если a и b — два числа, или два значения одной и той же величины, то
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+•	отношение a к b — это результат от деления a на  b;
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+•	если a > b, то отношение a:b обозначает, во сколько раз a больше b;
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+•	если a < b, то отношение a:b обозначает, какую часть составляет a от b;
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+•	процентное отношение a к b — это отношение a:b, умноженное на 100 процентов.
+
+    </p>
+    <h2 class="">Пропорции. Основное свойство пропорции</h2>
+    <p style="margin: 10px; font-size: 20px;">
+    Отношения 3:2 и 12:8 равны, т. к. 3:2=1,5 и 12:8=1,5.
+Получаем равенство 3:2=12:8, или 3/2=12/8.
+    </p>
+    <p style="margin: 10px; font-size: 20px;">
+        Говорят: «Отношение 3 к 2 равно отношению 12 к 8», или «3 относится к 2, как 12 относится к 8».
+Равенство двух отношений называют пропорцией:
+m/k = n/t, или m:k=n:t.
+        </p>
+    <p style="margin: 10px; font-size: 20px;">
+Все члены пропорции отличны от нуля: m≠0,k≠0,n≠0,t≠0.
+        </p>
+    <p style="margin: 10px; font-size: 20px;">
+Обрати внимание!
+        </p>
+    <p style="margin: 10px; font-size: 20px;">
+Числа m и t называют крайними членами пропорции, а числа k и n — средними.
+        </p>
+    <p style="margin: 10px; font-size: 20px;">
+Основное свойство пропорции:
+        </p>
+    <p style="margin: 10px; font-size: 20px;">
+произведение крайних членов пропорции равно произведению её средних членов.
+        </p>
+    <p style="margin: 10px; font-size: 20px;">
+Если m/k = n/t, или m:k = n:t, то m⋅t = k⋅n.
+        </p>
+    <p style="margin: 10px; font-size: 20px;">
+Действительно, в пропорции 3/2 = 12/8 произведение крайних членов 3⋅8=24 и произведение средних членов 2⋅12=24  равны.
+Верно и обратное утверждение. Если m, k, n и t — не равные нулю числа, и m⋅t = k⋅n, то m/k = n/t.
+</p>
+    <p style="margin: 10px; font-size: 20px;">Пример:
+        </p>
+    <p style="margin: 10px; font-size: 20px;">
+если 3⋅8=2⋅12, то 3/2 = 12/8.
+В пропорции 3/2 = 12/8 поменяем местами средние члены или крайние члены, тогда получим снова верные равенства:
+3/12 = 2/8 и 8/2 = 12/3.
+    </p>
+</div>
+</body>
+
+
+{% endblock %}
