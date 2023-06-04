@@ -38,6 +38,11 @@ font-family: Avenir !important;
     margin: 50px;
 }
 
+.p_text {
+text-align: center;
+font-size: large;
+}
+
 .photo_profile {
     min-width: 150px;
     max-width: 300px;
@@ -285,4 +290,3 @@ Width: 100%;
     width: 600px;
     margin:0 auto;
 }
-
