@@ -30,7 +30,7 @@ with open("{}/psswrd.txt".format(root_folder), 'r') as f:
 
 warnings.filterwarnings("ignore")
 
-logging.basicConfig(filename=root_folder+'/log/log.log',
+logging.basicConfig(filename=root_folder + '/log/log.log',
                     filemode='a',
                     format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S',
@@ -47,7 +47,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 app.config['SESSION_PERMANENT'] = True
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=14)
 # app.config['SESSION_COOKIE_SECURE'] = True
-app.config['SESSION_COOKIE_HTTPONLY'] = True
+# app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 # app.config['USE_X_SENDFILE'] = True
 
@@ -117,8 +117,8 @@ def profile():
     user_tests = session.query(Tests_table).filter_by(email=current_user.email).all()
     for test in user_tests:
         user_tests_list.append({"DT": test.DT.strftime("%Y-%m-%d %H:%M:%S"),
-                               "name": test.test_name,
-                               "value": test.value})
+                                "name": test.test_name,
+                                "value": test.value})
 
     return render_template('profile.html', user_tests_list=json.dumps(user_tests_list, ensure_ascii=False))
 
@@ -371,8 +371,10 @@ def admin():
     """!Админ панель"""
     if not current_user.get_role() == 'Admin':
         return redirect('/login')
-    new_users = '?'
-    day_tests = '?'
+    new_users = session.query(Users.id).filter(Users.DT_reg >= (datetime.now() - timedelta(days=1))
+                                               .strftime("%Y-%m-%d %H:%M:%S")).count()
+    day_tests = session.query(Tests_table.id).filter(Tests_table.DT >= (datetime.now() - timedelta(days=1))
+                                                     .strftime("%Y-%m-%d %H:%M:%S")).count()
     unreplied = session.query(Coments.id).filter_by(replied=False).count()
     return render_template('admin_index.html', new_users=new_users, unreplied=unreplied, day_tests=day_tests)
 
@@ -441,7 +443,8 @@ def registration():
             mail.register(email)
 
             user = Users(email=email, name=name, role=role,
-                         verified=False)
+                         verified=False,
+                         DT_reg=datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
             user.set_password(user_password)
             try:
                 session.add(user)

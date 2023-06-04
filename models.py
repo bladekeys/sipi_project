@@ -103,14 +103,16 @@ class Users(UserMixin, Base):
     img = sa.Column(sa.BLOB)
     img_name = sa.Column(sa.String)
     mimetype = sa.Column(sa.String)
+    DT_reg = sa.Column(sa.DateTime)
 
-    def __init__(self, *, name, email, role, verified):
+    def __init__(self, *, name, email, role, verified, DT_reg):
         """! Конструктор класса пользователей"""
         super().__init__()
         self.name = name
         self.email = email
         self.role = role
         self.verified = verified
+        self.DT_reg = DT_reg
 
     def set_password(self, user_password):
         self.password = generate_password_hash(user_password)

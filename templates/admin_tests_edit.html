@@ -55,12 +55,14 @@ border-radius: 10px;
 
 
 
+
     </style>
 
 </head>
 
 <script type="text/javascript">
             var questions_json = {{questions_json | tojson | safe}};
+
 
 
 
@@ -79,7 +81,8 @@ border-radius: 10px;
         <h4>Вопросы и ответы</h4>
         <div>
             <h5>1 вопрос</h5>
-            <input class="font-control form-control" name="q1" id="q1"/>
+            <textarea class="font-control form-control" name="q1" id="q1">
+            </textarea>
             <h6>Ответы</h6>
             <div style="display: flex;">
                 <input class="font-control form-control" name="q1a1" id="q1a1"/>
@@ -100,7 +103,8 @@ border-radius: 10px;
         </div>
         <div>
             <h5>2 вопрос</h5>
-            <input class="font-control form-control" name="q2" id="q2"/>
+            <textarea class="font-control form-control" name="q2" id="q2">
+            </textarea>
             <h6>Ответы</h6>
             <div style="display: flex;">
                 <input class="font-control form-control" name="q2a1" id="q2a1"/>
@@ -121,7 +125,8 @@ border-radius: 10px;
         </div>
         <div>
             <h5>3 вопрос</h5>
-            <input class="font-control form-control" name="q3" id="q3"/>
+            <textarea class="font-control form-control" name="q3" id="q3">
+            </textarea>
             <h6>Ответы</h6>
             <div style="display: flex;">
                 <input class="font-control form-control" name="q3a1" id="q3a1"/>
@@ -142,7 +147,8 @@ border-radius: 10px;
         </div>
         <div>
             <h5>4 вопрос</h5>
-            <input class="font-control form-control" name="q4" id="q4"/>
+            <textarea class="font-control form-control" name="q4" id="q4">
+            </textarea>
             <h6>Ответы</h6>
             <div style="display: flex;">
                 <input class="font-control form-control" name="q4a1" id="q4a1"/>
@@ -163,7 +169,8 @@ border-radius: 10px;
         </div>
         <div>
             <h5>5 вопрос</h5>
-            <input class="font-control form-control" name="q5" id="q5"/>
+            <textarea class="font-control form-control" name="q5" id="q5">
+            </textarea>
             <h6>Ответы</h6>
             <div style="display: flex;">
                 <input class="font-control form-control" name="q5a1" id="q5a1"/>
@@ -191,6 +198,7 @@ border-radius: 10px;
 
 <script type="text/javascript">
             var questions_json = {{questions_json | tojson | safe}};
+
 </script>
 <script type="text/javascript" src="{{ url_for('static', filename= 'js/admin_test.js') }}"></script>
 
