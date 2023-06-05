@@ -471,3 +471,11 @@
 2023-06-05 11:25:48,251 werkzeug INFO  * Restarting with stat
 2023-06-05 11:25:49,360 werkzeug WARNING  * Debugger is active!
 2023-06-05 11:25:49,363 werkzeug INFO  * Debugger PIN: 562-854-598
+2023-06-05 11:41:49,770 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.31.2.174:5000
+2023-06-05 11:41:49,771 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-06-05 11:41:49,773 werkzeug INFO  * Restarting with stat
+2023-06-05 11:41:52,70 werkzeug WARNING  * Debugger is active!
+2023-06-05 11:41:52,77 werkzeug INFO  * Debugger PIN: 562-854-598
