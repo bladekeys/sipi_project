@@ -479,3 +479,35 @@
 2023-06-05 11:41:49,773 werkzeug INFO  * Restarting with stat
 2023-06-05 11:41:52,70 werkzeug WARNING  * Debugger is active!
 2023-06-05 11:41:52,77 werkzeug INFO  * Debugger PIN: 562-854-598
+2023-06-05 11:57:56,135 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.31.2.174:5000
+2023-06-05 11:57:56,135 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-06-05 11:57:56,138 werkzeug INFO  * Restarting with stat
+2023-06-05 11:58:02,21 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.31.2.174:5000
+2023-06-05 11:58:02,22 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-06-05 11:58:02,24 werkzeug INFO  * Restarting with stat
+2023-06-05 11:58:04,185 werkzeug WARNING  * Debugger is active!
+2023-06-05 11:58:04,191 werkzeug INFO  * Debugger PIN: 562-854-598
+2023-06-05 12:09:55,494 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 12:09:55] "GET / HTTP/1.1" 200 -
+2023-06-05 12:09:55,592 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 12:09:55] "GET /static/css/main.css HTTP/1.1" 200 -
+2023-06-05 12:09:55,650 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 12:09:55] "GET /static/css/style.css HTTP/1.1" 200 -
+2023-06-05 12:09:57,423 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 12:09:57] "GET /static/js/loader.js HTTP/1.1" 200 -
+2023-06-05 12:09:57,435 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 12:09:57] "GET /static/loader.css HTTP/1.1" 200 -
+2023-06-05 12:09:57,446 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 12:09:57] "[32mGET /static//logo.svg HTTP/1.1[0m" 308 -
+2023-06-05 12:09:57,457 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 12:09:57] "GET /static/logo.svg HTTP/1.1" 200 -
+2023-06-05 12:09:57,471 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 12:09:57] "GET /static/monkey.gif HTTP/1.1" 200 -
+2023-06-05 12:09:57,781 root ERROR 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2023-06-05 12:09:57,792 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 12:09:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-06-05 12:12:01,611 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.31.2.174:5000
+2023-06-05 12:12:01,611 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-06-05 12:12:01,614 werkzeug INFO  * Restarting with stat
+2023-06-05 12:12:03,291 werkzeug WARNING  * Debugger is active!
+2023-06-05 12:12:03,296 werkzeug INFO  * Debugger PIN: 562-854-598
