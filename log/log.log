@@ -642,3 +642,40 @@
 2023-06-05 12:57:11,130 werkzeug INFO  * Restarting with stat
 2023-06-05 12:57:13,360 werkzeug WARNING  * Debugger is active!
 2023-06-05 12:57:13,366 werkzeug INFO  * Debugger PIN: 562-854-598
+2023-06-05 13:02:25,778 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.31.2.174:5000
+2023-06-05 13:02:25,778 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-06-05 13:02:25,781 werkzeug INFO  * Restarting with stat
+2023-06-05 13:02:27,129 werkzeug WARNING  * Debugger is active!
+2023-06-05 13:02:27,136 werkzeug INFO  * Debugger PIN: 562-854-598
+2023-06-05 13:02:37,99 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:02:37] "[35m[1mGET /articles/9klass/3 HTTP/1.1[0m" 500 -
+2023-06-05 13:02:37,146 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:02:37] "GET /articles/9klass/3?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2023-06-05 13:02:37,202 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:02:37] "GET /articles/9klass/3?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2023-06-05 13:02:37,219 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:02:37] "GET /articles/9klass/3?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2023-06-05 13:02:37,330 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:02:37] "[36mGET /articles/9klass/3?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-06-05 13:02:41,495 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:02:41] "[35m[1mGET /articles/9klass/1 HTTP/1.1[0m" 500 -
+2023-06-05 13:02:41,581 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:02:41] "[36mGET /articles/9klass/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-06-05 13:02:41,708 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:02:41] "[36mGET /articles/9klass/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-06-05 13:02:41,903 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:02:41] "[36mGET /articles/9klass/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-06-05 13:59:16,755 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:59:16] "GET /articles/5klass/natural HTTP/1.1" 200 -
+2023-06-05 13:59:16,802 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:59:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-06-05 13:59:16,854 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:59:16] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-06-05 13:59:16,857 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:59:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-06-05 13:59:16,858 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:59:16] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-06-05 13:59:16,860 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:59:16] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-06-05 13:59:21,478 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:59:21] "GET /articles/5klass/geom_figs HTTP/1.1" 200 -
+2023-06-05 13:59:21,516 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:59:21] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2023-06-05 13:59:21,570 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:59:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2023-06-05 13:59:21,578 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:59:21] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
+2023-06-05 13:59:21,581 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:59:21] "[36mGET /static/loader.css HTTP/1.1[0m" 304 -
+2023-06-05 13:59:21,583 werkzeug INFO 127.0.0.1 - - [05/Jun/2023 13:59:21] "[36mGET /static/logo.svg HTTP/1.1[0m" 304 -
+2023-06-05 19:46:55,655 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.74:5000
+2023-06-05 19:46:55,655 werkzeug INFO [33mPress CTRL+C to quit[0m
+2023-06-05 19:46:55,658 werkzeug INFO  * Restarting with stat
+2023-06-05 19:46:57,175 werkzeug WARNING  * Debugger is active!
+2023-06-05 19:46:57,187 werkzeug INFO  * Debugger PIN: 562-854-598
